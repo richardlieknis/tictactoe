@@ -56,6 +56,11 @@ function checkWin() {
             console.log("GEWONNEN:", currentPlayer);
             win = true;
             document.getElementById(`line${i}`).classList.remove('d-none');
+
+            setTimeout(function() {
+                document.getElementById('gameover').style.scale = .85;
+            }, 800);
+
         }
     }
 
@@ -67,5 +72,9 @@ function resetGame() {
         let fieldHtml = document.getElementById(i);
         fields = [0, 1, 2, 3, 4, 5, 6, 7, 8];
         fieldHtml.innerHTML = "";
+        document.getElementById('gameover').style.scale = 0;
+        document.getElementById(`line${i}`).classList.add('d-none');
+
+
     }
 }

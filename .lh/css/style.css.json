@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 148,
+            "activePatchIndex": 178,
             "patches": [
                 {
                     "date": 1670506844533,
@@ -600,6 +600,126 @@
                 {
                     "date": 1670525384667,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,9 @@\n     gap: 20px;\r\n }\r\n \r\n h1 {\r\n+    position: absolute;\r\n     text-align: center;\r\n     padding-top: 30px;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1670525611145,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -109,6 +109,5 @@\n     display: flex;\r\n     justify-content: center;\r\n     align-items: center;\r\n     width: 100%;\r\n-    height: 100vh;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670525626348,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,8 @@\n     display: flex;\r\n     justify-content: center;\r\n     align-items: center;\r\n     flex-direction: column;\r\n-    margin-top: 50px;\r\n     height: 100vh;\r\n }\r\n \r\n .gameField {\r\n"
+                },
+                {
+                    "date": 1670525633603,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -108,5 +108,6 @@\n     display: flex;\r\n     justify-content: center;\r\n     align-items: center;\r\n     width: 100%;\r\n+    height: 100vh;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670525769442,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n     width: 20px;\r\n }\r\n \r\n .d-none {\r\n-    display: none;\r\n+    display: none !important;\r\n }\r\n \r\n .maincontainer {\r\n     display: flex;\r\n"
+                },
+                {
+                    "date": 1670525887646,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -109,5 +109,8 @@\n     justify-content: center;\r\n     align-items: center;\r\n     width: 100%;\r\n     height: 100vh;\r\n-}\n\\ No newline at end of file\n+    transition: scale 1s ease-in-out;\r\n+}\r\n+\r\n+.gameoverAnim {}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670525892786,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -109,8 +109,9 @@\n     justify-content: center;\r\n     align-items: center;\r\n     width: 100%;\r\n     height: 100vh;\r\n+    scale: 0;\r\n     transition: scale 1s ease-in-out;\r\n }\r\n \r\n .gameoverAnim {}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670525903489,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -111,7 +111,5 @@\n     width: 100%;\r\n     height: 100vh;\r\n     scale: 0;\r\n     transition: scale 1s ease-in-out;\r\n-}\r\n-\r\n-.gameoverAnim {}\n\\ No newline at end of file\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670525938286,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -110,6 +110,6 @@\n     align-items: center;\r\n     width: 100%;\r\n     height: 100vh;\r\n     scale: 0;\r\n-    transition: scale 1s ease-in-out;\r\n+    transition: scale 300ms ease-in-out;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670525950457,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -110,6 +110,6 @@\n     align-items: center;\r\n     width: 100%;\r\n     height: 100vh;\r\n     scale: 0;\r\n-    transition: scale 300ms ease-in-out;\r\n+    transition: scale 500ms ease-in-out;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670526479608,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -111,5 +111,9 @@\n     width: 100%;\r\n     height: 100vh;\r\n     scale: 0;\r\n     transition: scale 500ms ease-in-out;\r\n+}\r\n+\r\n+.gameover div {\r\n+    position: absolute;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670526497051,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -115,5 +115,6 @@\n }\r\n \r\n .gameover div {\r\n     position: absolute;\r\n+    padding-top: 100px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670526502719,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -115,6 +115,6 @@\n }\r\n \r\n .gameover div {\r\n     position: absolute;\r\n-    padding-top: 100px;\r\n+    padding-top: 120px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670526669372,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -116,5 +116,9 @@\n \r\n .gameover div {\r\n     position: absolute;\r\n     padding-top: 120px;\r\n+}\r\n+\r\n+.gameover div div {\r\n+    padding-top: 100px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670526687443,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -118,7 +118,7 @@\n     position: absolute;\r\n     padding-top: 120px;\r\n }\r\n \r\n-.gameover div div {\r\n+.gameover div:last-child {\r\n     padding-top: 100px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670526707636,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -119,6 +119,7 @@\n     padding-top: 120px;\r\n }\r\n \r\n .gameover div:last-child {\r\n-    padding-top: 100px;\r\n+    padding-top: 180px;\r\n+    cursor: pointer;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670526774352,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -115,11 +115,11 @@\n }\r\n \r\n .gameover div {\r\n     position: absolute;\r\n-    padding-top: 120px;\r\n+    margin-top: 120px;\r\n }\r\n \r\n .gameover div:last-child {\r\n-    padding-top: 180px;\r\n+    margin-top: 180px;\r\n     cursor: pointer;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670526786941,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -119,7 +119,7 @@\n     margin-top: 120px;\r\n }\r\n \r\n .gameover div:last-child {\r\n-    margin-top: 180px;\r\n+    margin-top: 200px;\r\n     cursor: pointer;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670526792491,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -119,7 +119,7 @@\n     margin-top: 120px;\r\n }\r\n \r\n .gameover div:last-child {\r\n-    margin-top: 200px;\r\n+    margin-top: 300px;\r\n     cursor: pointer;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670526798321,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -119,7 +119,7 @@\n     margin-top: 120px;\r\n }\r\n \r\n .gameover div:last-child {\r\n-    margin-top: 300px;\r\n+    margin-top: 320px;\r\n     cursor: pointer;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670526812367,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -121,5 +121,6 @@\n \r\n .gameover div:last-child {\r\n     margin-top: 320px;\r\n     cursor: pointer;\r\n+    background-color: #416080;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670526820288,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -122,5 +122,6 @@\n .gameover div:last-child {\r\n     margin-top: 320px;\r\n     cursor: pointer;\r\n     background-color: #416080;\r\n+    width: 140px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670526831768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -123,5 +123,7 @@\n     margin-top: 320px;\r\n     cursor: pointer;\r\n     background-color: #416080;\r\n     width: 140px;\r\n+    height: 50px;\r\n+    text-align: center;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670526837306,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -124,6 +124,7 @@\n     cursor: pointer;\r\n     background-color: #416080;\r\n     width: 140px;\r\n     height: 50px;\r\n+    display: flex;\r\n     text-align: center;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670526844738,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -125,6 +125,6 @@\n     background-color: #416080;\r\n     width: 140px;\r\n     height: 50px;\r\n     display: flex;\r\n-    text-align: center;\r\n+    justify-content: center;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670526861486,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -124,7 +124,9 @@\n     cursor: pointer;\r\n     background-color: #416080;\r\n     width: 140px;\r\n     height: 50px;\r\n+    border-radius: 12px;\r\n     display: flex;\r\n     justify-content: center;\r\n+    align-items: center;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670526874322,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -124,8 +124,9 @@\n     cursor: pointer;\r\n     background-color: #416080;\r\n     width: 140px;\r\n     height: 50px;\r\n+    font-weight: bold;\r\n     border-radius: 12px;\r\n     display: flex;\r\n     justify-content: center;\r\n     align-items: center;\r\n"
+                },
+                {
+                    "date": 1670526889161,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -125,8 +125,9 @@\n     background-color: #416080;\r\n     width: 140px;\r\n     height: 50px;\r\n     font-weight: bold;\r\n+    font-size: 32px;\r\n     border-radius: 12px;\r\n     display: flex;\r\n     justify-content: center;\r\n     align-items: center;\r\n"
+                },
+                {
+                    "date": 1670526894554,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -125,9 +125,9 @@\n     background-color: #416080;\r\n     width: 140px;\r\n     height: 50px;\r\n     font-weight: bold;\r\n-    font-size: 32px;\r\n+    font-size: 24px;\r\n     border-radius: 12px;\r\n     display: flex;\r\n     justify-content: center;\r\n     align-items: center;\r\n"
+                },
+                {
+                    "date": 1670526941321,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -107,9 +107,9 @@\n     top: 0;\r\n     display: flex;\r\n     justify-content: center;\r\n     align-items: center;\r\n-    width: 100%;\r\n+    width: 40%;\r\n     height: 100vh;\r\n     scale: 0;\r\n     transition: scale 500ms ease-in-out;\r\n }\r\n"
+                },
+                {
+                    "date": 1670526956090,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -107,9 +107,9 @@\n     top: 0;\r\n     display: flex;\r\n     justify-content: center;\r\n     align-items: center;\r\n-    width: 40%;\r\n+    width: 100%;\r\n     height: 100vh;\r\n     scale: 0;\r\n     transition: scale 500ms ease-in-out;\r\n }\r\n"
                 }
             ],
             "date": 1670506844533,

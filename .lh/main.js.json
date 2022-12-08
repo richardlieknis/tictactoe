@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 19,
+            "activePatchIndex": 41,
             "patches": [
                 {
                     "date": 1670507132949,
@@ -84,6 +84,94 @@
                 {
                     "date": 1670524135605,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,8 +29,9 @@\n         } else if (currentPlayer === 'cross') {\r\n             fields[id] = 'cross';\r\n             fieldHtml.innerHTML = `<img src=\"src/img/cross.png\">`;\r\n             checkWin();\r\n+            setCurrentPlayer(currentPlayer);\r\n \r\n         }\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1670525835556,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,8 +55,9 @@\n             fields[winFields[i][1]] === fields[winFields[i][2]]) {\r\n             console.log(\"GEWONNEN:\", currentPlayer);\r\n             win = true;\r\n             document.getElementById(`line${i}`).classList.remove('d-none');\r\n+            document.getElementById('gameover').classList.remove('d-none');\r\n         }\r\n     }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1670525926429,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,9 +55,9 @@\n             fields[winFields[i][1]] === fields[winFields[i][2]]) {\r\n             console.log(\"GEWONNEN:\", currentPlayer);\r\n             win = true;\r\n             document.getElementById(`line${i}`).classList.remove('d-none');\r\n-            document.getElementById('gameover').classList.remove('d-none');\r\n+            document.getElementById('gameover').style.scale = 1;\r\n         }\r\n     }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1670526038790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,7 +66,9 @@\n     win = false;\r\n     for (let i = 0; i < 9; i++) {\r\n         let fieldHtml = document.getElementById(i);\r\n         fields = [0, 1, 2, 3, 4, 5, 6, 7, 8];\r\n+        document.getElementById(`line${i}`).classList.add('d-none');\r\n+        document.getElementById('gameover').style.scale = 0;\r\n         fieldHtml.innerHTML = \"\";\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670526124869,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,9 +66,10 @@\n     win = false;\r\n     for (let i = 0; i < 9; i++) {\r\n         let fieldHtml = document.getElementById(i);\r\n         fields = [0, 1, 2, 3, 4, 5, 6, 7, 8];\r\n+        fieldHtml.innerHTML = \"\";\r\n         document.getElementById(`line${i}`).classList.add('d-none');\r\n         document.getElementById('gameover').style.scale = 0;\r\n-        fieldHtml.innerHTML = \"\";\r\n+\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670526137323,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,9 +67,10 @@\n     for (let i = 0; i < 9; i++) {\r\n         let fieldHtml = document.getElementById(i);\r\n         fields = [0, 1, 2, 3, 4, 5, 6, 7, 8];\r\n         fieldHtml.innerHTML = \"\";\r\n+        document.getElementById('gameover').style.scale = 0;\r\n         document.getElementById(`line${i}`).classList.add('d-none');\r\n-        document.getElementById('gameover').style.scale = 0;\r\n \r\n+\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670526268629,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,9 +68,9 @@\n         let fieldHtml = document.getElementById(i);\r\n         fields = [0, 1, 2, 3, 4, 5, 6, 7, 8];\r\n         fieldHtml.innerHTML = \"\";\r\n         document.getElementById('gameover').style.scale = 0;\r\n-        document.getElementById(`line${i}`).classList.add('d-none');\r\n+        //document.getElementById(`line${i}`).classList.add('d-none');\r\n \r\n \r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670526304836,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,9 +68,9 @@\n         let fieldHtml = document.getElementById(i);\r\n         fields = [0, 1, 2, 3, 4, 5, 6, 7, 8];\r\n         fieldHtml.innerHTML = \"\";\r\n         document.getElementById('gameover').style.scale = 0;\r\n-        //document.getElementById(`line${i}`).classList.add('d-none');\r\n+        document.getElementById(`line${i}`).classList.add('d-none');\r\n \r\n \r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670526323467,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,9 +68,9 @@\n         let fieldHtml = document.getElementById(i);\r\n         fields = [0, 1, 2, 3, 4, 5, 6, 7, 8];\r\n         fieldHtml.innerHTML = \"\";\r\n         document.getElementById('gameover').style.scale = 0;\r\n-        document.getElementById(`line${i}`).classList.add('d-none');\r\n+        document.getElementById(`line0`).classList.add('d-none');\r\n \r\n \r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670526349205,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,9 +68,9 @@\n         let fieldHtml = document.getElementById(i);\r\n         fields = [0, 1, 2, 3, 4, 5, 6, 7, 8];\r\n         fieldHtml.innerHTML = \"\";\r\n         document.getElementById('gameover').style.scale = 0;\r\n-        document.getElementById(`line0`).classList.add('d-none');\r\n+        document.getElementById(`line${i}`).classList.add('d-none');\r\n \r\n \r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670526384173,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n \r\n let fields = [0, 1, 2, 3, 4, 5, 6, 7, 8];\r\n let currentPlayer = 'cross';\r\n let win = false;\r\n+let winLine;\r\n \r\n let winFields = [\r\n     [0, 1, 2],\r\n     [3, 4, 5],\r\n"
+                },
+                {
+                    "date": 1670526417651,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,8 @@\n \r\n let fields = [0, 1, 2, 3, 4, 5, 6, 7, 8];\r\n let currentPlayer = 'cross';\r\n let win = false;\r\n-let winLine;\r\n \r\n let winFields = [\r\n     [0, 1, 2],\r\n     [3, 4, 5],\r\n"
+                },
+                {
+                    "date": 1670526962929,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,9 +55,9 @@\n             fields[winFields[i][1]] === fields[winFields[i][2]]) {\r\n             console.log(\"GEWONNEN:\", currentPlayer);\r\n             win = true;\r\n             document.getElementById(`line${i}`).classList.remove('d-none');\r\n-            document.getElementById('gameover').style.scale = 1;\r\n+            document.getElementById('gameover').style.scale = 0.2;\r\n         }\r\n     }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1670526973572,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,9 +55,9 @@\n             fields[winFields[i][1]] === fields[winFields[i][2]]) {\r\n             console.log(\"GEWONNEN:\", currentPlayer);\r\n             win = true;\r\n             document.getElementById(`line${i}`).classList.remove('d-none');\r\n-            document.getElementById('gameover').style.scale = 0.2;\r\n+            document.getElementById('gameover').style.scale = 0.6;\r\n         }\r\n     }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1670526982714,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,9 +55,9 @@\n             fields[winFields[i][1]] === fields[winFields[i][2]]) {\r\n             console.log(\"GEWONNEN:\", currentPlayer);\r\n             win = true;\r\n             document.getElementById(`line${i}`).classList.remove('d-none');\r\n-            document.getElementById('gameover').style.scale = 0.6;\r\n+            document.getElementById('gameover').style.scale = 3;\r\n         }\r\n     }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1670526997277,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,9 +55,9 @@\n             fields[winFields[i][1]] === fields[winFields[i][2]]) {\r\n             console.log(\"GEWONNEN:\", currentPlayer);\r\n             win = true;\r\n             document.getElementById(`line${i}`).classList.remove('d-none');\r\n-            document.getElementById('gameover').style.scale = 3;\r\n+            document.getElementById('gameover').style.scale = 1;\r\n         }\r\n     }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1670527031360,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,9 +55,9 @@\n             fields[winFields[i][1]] === fields[winFields[i][2]]) {\r\n             console.log(\"GEWONNEN:\", currentPlayer);\r\n             win = true;\r\n             document.getElementById(`line${i}`).classList.remove('d-none');\r\n-            document.getElementById('gameover').style.scale = 1;\r\n+            document.getElementById('gameover').style.scale = .85;\r\n         }\r\n     }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1670527256442,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,10 +54,13 @@\n         if (fields[winFields[i][0]] === fields[winFields[i][1]] &&\r\n             fields[winFields[i][1]] === fields[winFields[i][2]]) {\r\n             console.log(\"GEWONNEN:\", currentPlayer);\r\n             win = true;\r\n-            document.getElementById(`line${i}`).classList.remove('d-none');\r\n-            document.getElementById('gameover').style.scale = .85;\r\n+\r\n+            setTimeout() {\r\n+                document.getElementById(`line${i}`).classList.remove('d-none');\r\n+                document.getElementById('gameover').style.scale = .85;\r\n+            }\r\n         }\r\n     }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1670527312025,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,12 +55,13 @@\n             fields[winFields[i][1]] === fields[winFields[i][2]]) {\r\n             console.log(\"GEWONNEN:\", currentPlayer);\r\n             win = true;\r\n \r\n-            setTimeout() {\r\n+            setTimeout(function() {\r\n                 document.getElementById(`line${i}`).classList.remove('d-none');\r\n                 document.getElementById('gameover').style.scale = .85;\r\n-            }\r\n+            }, 2000);\r\n+\r\n         }\r\n     }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1670527329045,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,9 @@\n \r\n             setTimeout(function() {\r\n                 document.getElementById(`line${i}`).classList.remove('d-none');\r\n                 document.getElementById('gameover').style.scale = .85;\r\n-            }, 2000);\r\n+            }, 300);\r\n \r\n         }\r\n     }\r\n \r\n"
+                },
+                {
+                    "date": 1670527336889,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,9 @@\n \r\n             setTimeout(function() {\r\n                 document.getElementById(`line${i}`).classList.remove('d-none');\r\n                 document.getElementById('gameover').style.scale = .85;\r\n-            }, 300);\r\n+            }, 600);\r\n \r\n         }\r\n     }\r\n \r\n"
+                },
+                {
+                    "date": 1670527357939,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,11 +54,11 @@\n         if (fields[winFields[i][0]] === fields[winFields[i][1]] &&\r\n             fields[winFields[i][1]] === fields[winFields[i][2]]) {\r\n             console.log(\"GEWONNEN:\", currentPlayer);\r\n             win = true;\r\n+            document.getElementById(`line${i}`).classList.remove('d-none');\r\n \r\n             setTimeout(function() {\r\n-                document.getElementById(`line${i}`).classList.remove('d-none');\r\n                 document.getElementById('gameover').style.scale = .85;\r\n             }, 600);\r\n \r\n         }\r\n"
+                },
+                {
+                    "date": 1670527367132,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,9 @@\n             document.getElementById(`line${i}`).classList.remove('d-none');\r\n \r\n             setTimeout(function() {\r\n                 document.getElementById('gameover').style.scale = .85;\r\n-            }, 600);\r\n+            }, 800);\r\n \r\n         }\r\n     }\r\n \r\n"
                 }
             ],
             "date": 1670507132949,

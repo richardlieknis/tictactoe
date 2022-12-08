@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 65,
+            "activePatchIndex": 73,
             "patches": [
                 {
                     "date": 1670506769660,
@@ -268,6 +268,38 @@
                 {
                     "date": 1670525458945,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,8 @@\n     <script src=\"main.js\"></script>\r\n </head>\r\n \r\n <body>\r\n-    <h1>Tic Tac Toe</h1>\r\n     <div class=\"maincontainer\">\r\n         <div class=\"players\">\r\n             <div id=\"player1\" class=\"\">\r\n                 <img src=\"src/img/cross.png\" /> Player 1\r\n"
+                },
+                {
+                    "date": 1670525646296,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n                 <div id=\"line7\" class=\"line d-none make-diagonal2\" style=\"top: 240px; right: 20px\"></div>\r\n             </div>\r\n         </div>\r\n     </div>\r\n-    <div class=\"gameover\">\r\n+    <div class=\"gameover d-none\">\r\n         <img src=\"src/img/gameover.png\" />\r\n     </div>\r\n </body>\r\n \r\n"
+                },
+                {
+                    "date": 1670525817470,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n                 <div id=\"line7\" class=\"line d-none make-diagonal2\" style=\"top: 240px; right: 20px\"></div>\r\n             </div>\r\n         </div>\r\n     </div>\r\n-    <div class=\"gameover d-none\">\r\n+    <div id=\"gameover\" class=\"gameover d-none\">\r\n         <img src=\"src/img/gameover.png\" />\r\n     </div>\r\n </body>\r\n \r\n"
+                },
+                {
+                    "date": 1670525912736,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n                 <div id=\"line7\" class=\"line d-none make-diagonal2\" style=\"top: 240px; right: 20px\"></div>\r\n             </div>\r\n         </div>\r\n     </div>\r\n-    <div id=\"gameover\" class=\"gameover d-none\">\r\n+    <div id=\"gameover\" class=\"gameover\">\r\n         <img src=\"src/img/gameover.png\" />\r\n     </div>\r\n </body>\r\n \r\n"
+                },
+                {
+                    "date": 1670526456397,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,8 +45,9 @@\n         </div>\r\n     </div>\r\n     <div id=\"gameover\" class=\"gameover\">\r\n         <img src=\"src/img/gameover.png\" />\r\n+        <div>test</div>\r\n     </div>\r\n </body>\r\n \r\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670526564374,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,11 @@\n         </div>\r\n     </div>\r\n     <div id=\"gameover\" class=\"gameover\">\r\n         <img src=\"src/img/gameover.png\" />\r\n-        <div>test</div>\r\n+        <div>\r\n+            <h1>Player 1 Win</h1>\r\n+        </div>\r\n     </div>\r\n </body>\r\n \r\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670526590649,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,11 +45,9 @@\n         </div>\r\n     </div>\r\n     <div id=\"gameover\" class=\"gameover\">\r\n         <img src=\"src/img/gameover.png\" />\r\n-        <div>\r\n-            <h1>Player 1 Win</h1>\r\n-        </div>\r\n+        <div>Player 1 Win</div>\r\n     </div>\r\n </body>\r\n \r\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670526624842,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,8 +46,9 @@\n     </div>\r\n     <div id=\"gameover\" class=\"gameover\">\r\n         <img src=\"src/img/gameover.png\" />\r\n         <div>Player 1 Win</div>\r\n+        <div onclick=\"restartGame()\">RESTART</div>\r\n     </div>\r\n </body>\r\n \r\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670526727910,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n     </div>\r\n     <div id=\"gameover\" class=\"gameover\">\r\n         <img src=\"src/img/gameover.png\" />\r\n         <div>Player 1 Win</div>\r\n-        <div onclick=\"restartGame()\">RESTART</div>\r\n+        <div onclick=\"resetGame()\">RESTART</div>\r\n     </div>\r\n </body>\r\n \r\n </html>\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1670506769660,
