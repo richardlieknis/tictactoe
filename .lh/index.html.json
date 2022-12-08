@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 73,
+            "activePatchIndex": 74,
             "patches": [
                 {
                     "date": 1670506769660,
@@ -300,6 +300,10 @@
                 {
                     "date": 1670526727910,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n     </div>\r\n     <div id=\"gameover\" class=\"gameover\">\r\n         <img src=\"src/img/gameover.png\" />\r\n         <div>Player 1 Win</div>\r\n-        <div onclick=\"restartGame()\">RESTART</div>\r\n+        <div onclick=\"resetGame()\">RESTART</div>\r\n     </div>\r\n </body>\r\n \r\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670532802486,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n         </div>\r\n     </div>\r\n     <div id=\"gameover\" class=\"gameover\">\r\n         <img src=\"src/img/gameover.png\" />\r\n-        <div>Player 1 Win</div>\r\n+        <div id=\"winner\">Player 1 Win</div>\r\n         <div onclick=\"resetGame()\">RESTART</div>\r\n     </div>\r\n </body>\r\n \r\n"
                 }
             ],
             "date": 1670506769660,

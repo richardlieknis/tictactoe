@@ -1,6 +1,8 @@
 const circle = document.getElementById('circle');
 const cross = document.getElementById('cross');
 const gameover = document.getElementById('gameover');
+const winSound = new Audio('src/audio/win.mp3');
+const drawSound = new Audio('src/audio/draw.mp3');
 
 let fields = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 let currentPlayer = 'cross';
@@ -59,11 +61,19 @@ function checkWin() {
 
             setTimeout(function() {
                 document.getElementById('gameover').style.scale = .85;
+                showWinner();
+                winSound.play();
             }, 800);
-
         }
     }
+}
 
+function showWinner() {
+    if (currentPlayer === 'circle') {
+        document.getElementById("winner").innerHTML = 'Player 1 won!'
+    } else if (currentPlayer === 'cross') {
+        document.getElementById("winner").innerHTML = 'Player 2 won!'
+    }
 }
 
 function resetGame() {

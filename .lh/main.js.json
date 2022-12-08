@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 41,
+            "activePatchIndex": 49,
             "patches": [
                 {
                     "date": 1670507132949,
@@ -172,6 +172,38 @@
                 {
                     "date": 1670527367132,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,9 @@\n             document.getElementById(`line${i}`).classList.remove('d-none');\r\n \r\n             setTimeout(function() {\r\n                 document.getElementById('gameover').style.scale = .85;\r\n-            }, 600);\r\n+            }, 800);\r\n \r\n         }\r\n     }\r\n \r\n"
+                },
+                {
+                    "date": 1670532719474,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,8 +63,12 @@\n \r\n         }\r\n     }\r\n \r\n+    if (win) {\r\n+        showWinner();\r\n+    }\r\n+\r\n }\r\n \r\n function resetGame() {\r\n     win = false;\r\n"
+                },
+                {
+                    "date": 1670532784602,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,17 +58,18 @@\n             document.getElementById(`line${i}`).classList.remove('d-none');\r\n \r\n             setTimeout(function() {\r\n                 document.getElementById('gameover').style.scale = .85;\r\n+                showWinner();\r\n             }, 800);\r\n \r\n         }\r\n     }\r\n \r\n-    if (win) {\r\n-        showWinner();\r\n-    }\r\n+}\r\n \r\n+function showWinner() {\r\n+\r\n }\r\n \r\n function resetGame() {\r\n     win = false;\r\n"
+                },
+                {
+                    "date": 1670532842823,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,13 +63,12 @@\n             }, 800);\r\n \r\n         }\r\n     }\r\n-\r\n }\r\n \r\n function showWinner() {\r\n-\r\n+    document.getElementById('winner').innerHTML = currentPlayer;\r\n }\r\n \r\n function resetGame() {\r\n     win = false;\r\n"
+                },
+                {
+                    "date": 1670532937581,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,9 +66,13 @@\n     }\r\n }\r\n \r\n function showWinner() {\r\n-    document.getElementById('winner').innerHTML = currentPlayer;\r\n+    if (player === 'circle') {\r\n+        document.getElementById(\"winner\").innerHTML = 'Player 1 won!'\r\n+    } else if (player === 'cross') {\r\n+        document.getElementById(\"winner\").innerHTML = 'Player 2 won!'\r\n+    }\r\n }\r\n \r\n function resetGame() {\r\n     win = false;\r\n"
+                },
+                {
+                    "date": 1670532966256,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,11 +66,11 @@\n     }\r\n }\r\n \r\n function showWinner() {\r\n-    if (player === 'circle') {\r\n+    if (currentPlayer === 'circle') {\r\n         document.getElementById(\"winner\").innerHTML = 'Player 1 won!'\r\n-    } else if (player === 'cross') {\r\n+    } else if (currentPlayer === 'cross') {\r\n         document.getElementById(\"winner\").innerHTML = 'Player 2 won!'\r\n     }\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1670533293288,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n const circle = document.getElementById('circle');\r\n const cross = document.getElementById('cross');\r\n const gameover = document.getElementById('gameover');\r\n+const winSound = new Audio('src/audio/win.mp3');\r\n+const drawSound = new Audio('src/audio/draw.mp3');\r\n \r\n let fields = [0, 1, 2, 3, 4, 5, 6, 7, 8];\r\n let currentPlayer = 'cross';\r\n let win = false;\r\n"
+                },
+                {
+                    "date": 1670533307440,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,8 +61,9 @@\n \r\n             setTimeout(function() {\r\n                 document.getElementById('gameover').style.scale = .85;\r\n                 showWinner();\r\n+                winSound.play();\r\n             }, 800);\r\n \r\n         }\r\n     }\r\n"
+                },
+                {
+                    "date": 1670533421862,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,8 @@\n                 document.getElementById('gameover').style.scale = .85;\r\n                 showWinner();\r\n                 winSound.play();\r\n             }, 800);\r\n-\r\n         }\r\n     }\r\n }\r\n \r\n"
                 }
             ],
             "date": 1670507132949,

@@ -132,3 +132,15 @@ h1 {
     justify-content: center;
     align-items: center;
 }
+
+.gameover div:hover {
+    background-color: #3f6892;
+}
+
+#winner {
+    font-size: 22px;
+    text-transform: uppercase;
+    background: -webkit-linear-gradient(#eee, #fff4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
