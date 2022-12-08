@@ -1,0 +1,610 @@
+{
+    "sourceFile": "css/style.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 148,
+            "patches": [
+                {
+                    "date": 1670506844533,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1670506854396,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,12 @@\n     color: aliceblue;\r\n     background-color: #111;\r\n }\r\n \r\n+.players {\r\n+    display: flex;\r\n+}\r\n+\r\n .players img {\r\n     width: 20px;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1670506862546,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,10 @@\n }\r\n \r\n .players {\r\n     display: flex;\r\n+    align-items: center;\r\n+    justify-content: center;\r\n }\r\n \r\n .players img {\r\n     width: 20px;\r\n"
+                },
+                {
+                    "date": 1670506868200,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,9 @@\n .players {\r\n     display: flex;\r\n     align-items: center;\r\n     justify-content: center;\r\n+    gap: 20px;\r\n }\r\n \r\n .players img {\r\n     width: 20px;\r\n"
+                },
+                {
+                    "date": 1670506893843,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,13 @@\n     justify-content: center;\r\n     gap: 20px;\r\n }\r\n \r\n+#player1,\r\n+#player2 {\r\n+    display: flex;\r\n+}\r\n+\r\n .players img {\r\n     width: 20px;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1670506904523,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,10 @@\n \r\n #player1,\r\n #player2 {\r\n     display: flex;\r\n+    align-items: center;\r\n+    gap: 5px;\r\n }\r\n \r\n .players img {\r\n     width: 20px;\r\n"
+                },
+                {
+                    "date": 1670506913699,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,8 +21,9 @@\n #player2 {\r\n     display: flex;\r\n     align-items: center;\r\n     gap: 5px;\r\n+    font-size: 24px;\r\n }\r\n \r\n .players img {\r\n     width: 20px;\r\n"
+                },
+                {
+                    "date": 1670506942823,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,12 @@\n     gap: 5px;\r\n     font-size: 24px;\r\n }\r\n \r\n+.inactive {\r\n+    opacity: 0.5;\r\n+}\r\n+\r\n .players img {\r\n     width: 20px;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1670509543989,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,5 +66,11 @@\n }\r\n \r\n .box:hover {\r\n     background-color: #416080;\r\n+}\r\n+\r\n+.line {\r\n+    background-color: #f00;\r\n+    width: 100px;\r\n+    height: 20px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670509558176,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -72,5 +72,6 @@\n .line {\r\n     background-color: #f00;\r\n     width: 100px;\r\n     height: 20px;\r\n+    margin-bottom: 1px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670509577325,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,8 +69,9 @@\n     background-color: #416080;\r\n }\r\n \r\n .line {\r\n+    position: absolute;\r\n     background-color: #f00;\r\n     width: 100px;\r\n     height: 20px;\r\n     margin-bottom: 1px;\r\n"
+                },
+                {
+                    "date": 1670509584765,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,5 +74,6 @@\n     background-color: #f00;\r\n     width: 100px;\r\n     height: 20px;\r\n     margin-bottom: 1px;\r\n+    z-index: 2;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670509597118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,6 +74,6 @@\n     background-color: #f00;\r\n     width: 100px;\r\n     height: 20px;\r\n     margin-bottom: 1px;\r\n-    z-index: 2;\r\n+    top: 0;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670509627768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,10 +70,11 @@\n }\r\n \r\n .line {\r\n     position: absolute;\r\n+    display: flex;\r\n     background-color: #f00;\r\n     width: 100px;\r\n     height: 20px;\r\n     margin-bottom: 1px;\r\n-    top: 0;\r\n+    top: 100px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670509633066,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -71,8 +71,9 @@\n \r\n .line {\r\n     position: absolute;\r\n     display: flex;\r\n+    gap: 100px;\r\n     background-color: #f00;\r\n     width: 100px;\r\n     height: 20px;\r\n     margin-bottom: 1px;\r\n"
+                },
+                {
+                    "date": 1670509654251,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,12 +70,10 @@\n }\r\n \r\n .line {\r\n     position: absolute;\r\n-    display: flex;\r\n-    gap: 100px;\r\n     background-color: #f00;\r\n     width: 100px;\r\n     height: 20px;\r\n     margin-bottom: 1px;\r\n-    top: 100px;\r\n+    top: 400px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670509660260,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,6 +74,6 @@\n     background-color: #f00;\r\n     width: 100px;\r\n     height: 20px;\r\n     margin-bottom: 1px;\r\n-    top: 400px;\r\n+    top: 250px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670509665776,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,6 +74,6 @@\n     background-color: #f00;\r\n     width: 100px;\r\n     height: 20px;\r\n     margin-bottom: 1px;\r\n-    top: 250px;\r\n+    top: 330px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670509674106,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -71,9 +71,9 @@\n \r\n .line {\r\n     position: absolute;\r\n     background-color: #f00;\r\n-    width: 100px;\r\n+    width: 400px;\r\n     height: 20px;\r\n     margin-bottom: 1px;\r\n     top: 330px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670509683726,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -75,5 +75,6 @@\n     width: 400px;\r\n     height: 20px;\r\n     margin-bottom: 1px;\r\n     top: 330px;\r\n+    left: 300px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670509699120,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,13 +68,5 @@\n .box:hover {\r\n     background-color: #416080;\r\n }\r\n \r\n-.line {\r\n-    position: absolute;\r\n-    background-color: #f00;\r\n-    width: 400px;\r\n-    height: 20px;\r\n-    margin-bottom: 1px;\r\n-    top: 330px;\r\n-    left: 300px;\r\n-}\n\\ No newline at end of file\n+.line {}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670509734516,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,8 +41,9 @@\n     height: 100vh;\r\n }\r\n \r\n .gameField {\r\n+    position: relative;\r\n     width: 500px;\r\n     height: 500px;\r\n     margin: 0 auto;\r\n     background-color: #34495e;\r\n"
+                },
+                {
+                    "date": 1670509741860,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,5 +69,7 @@\n .box:hover {\r\n     background-color: #416080;\r\n }\r\n \r\n-.line {}\n\\ No newline at end of file\n+.line {\r\n+    position: absolute;\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670509749501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -71,5 +71,7 @@\n }\r\n \r\n .line {\r\n     position: absolute;\r\n+    width: 300px;\r\n+    height: 10px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670509758755,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,5 +73,6 @@\n .line {\r\n     position: absolute;\r\n     width: 300px;\r\n     height: 10px;\r\n+    background-color: #f00;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670509774406,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,5 +74,6 @@\n     position: absolute;\r\n     width: 300px;\r\n     height: 10px;\r\n     background-color: #f00;\r\n+    top: 0;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670509791773,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,6 +74,6 @@\n     position: absolute;\r\n     width: 300px;\r\n     height: 10px;\r\n     background-color: #f00;\r\n-    top: 0;\r\n+    top: 100px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670509817927,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -71,9 +71,9 @@\n }\r\n \r\n .line {\r\n     position: absolute;\r\n-    width: 300px;\r\n+    width: 350px;\r\n     height: 10px;\r\n     background-color: #f00;\r\n     top: 100px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670509831670,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -71,9 +71,9 @@\n }\r\n \r\n .line {\r\n     position: absolute;\r\n-    width: 350px;\r\n+    width: 450px;\r\n     height: 10px;\r\n     background-color: #f00;\r\n-    top: 100px;\r\n+    top: 75px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670509852856,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,8 +51,9 @@\n     border: 6px solid #2c3e50;\r\n     border-radius: 10px;\r\n     display: grid;\r\n     grid-template: repeat(3, 1fr) / repeat(3, 1fr);\r\n+    display: flex;\r\n }\r\n \r\n .box {\r\n     border: 6px solid #2c3e50;\r\n"
+                },
+                {
+                    "date": 1670509872404,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,9 +51,8 @@\n     border: 6px solid #2c3e50;\r\n     border-radius: 10px;\r\n     display: grid;\r\n     grid-template: repeat(3, 1fr) / repeat(3, 1fr);\r\n-    display: flex;\r\n }\r\n \r\n .box {\r\n     border: 6px solid #2c3e50;\r\n"
+                },
+                {
+                    "date": 1670509879550,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -75,5 +75,6 @@\n     width: 450px;\r\n     height: 10px;\r\n     background-color: #f00;\r\n     top: 75px;\r\n+    left: 10px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670509928653,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,7 +74,5 @@\n     position: absolute;\r\n     width: 450px;\r\n     height: 10px;\r\n     background-color: #f00;\r\n-    top: 75px;\r\n-    left: 10px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670510269303,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,6 +73,6 @@\n .line {\r\n     position: absolute;\r\n     width: 450px;\r\n     height: 10px;\r\n-    background-color: #f00;\r\n+    background-color: rgb(129, 129, 129);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670510292196,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,5 +74,6 @@\n     position: absolute;\r\n     width: 450px;\r\n     height: 10px;\r\n     background-color: rgb(129, 129, 129);\r\n+    transition: scaleX 1s ease-in-out;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670511447908,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,6 +74,9 @@\n     position: absolute;\r\n     width: 450px;\r\n     height: 10px;\r\n     background-color: rgb(129, 129, 129);\r\n+    transform: scaleX(0);\r\n     transition: scaleX 1s ease-in-out;\r\n\\ No newline at end of file\n-}\n+}\r\n+\r\n+#line0 {}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670511456269,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,9 +74,9 @@\n     position: absolute;\r\n     width: 450px;\r\n     height: 10px;\r\n     background-color: rgb(129, 129, 129);\r\n-    transform: scaleX(0);\r\n+    transform: scaleX(1);\r\n     transition: scaleX 1s ease-in-out;\r\n }\r\n \r\n #line0 {}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670511464471,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,9 +74,9 @@\n     position: absolute;\r\n     width: 450px;\r\n     height: 10px;\r\n     background-color: rgb(129, 129, 129);\r\n-    transform: scaleX(1);\r\n+    transform: scaleX(0);\r\n     transition: scaleX 1s ease-in-out;\r\n }\r\n \r\n #line0 {}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670511476048,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -78,5 +78,7 @@\n     transform: scaleX(0);\r\n     transition: scaleX 1s ease-in-out;\r\n }\r\n \r\n-#line0 {}\n\\ No newline at end of file\n+#line0 {\r\n+    transform: scaleX(1);\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670511485313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -75,9 +75,9 @@\n     width: 450px;\r\n     height: 10px;\r\n     background-color: rgb(129, 129, 129);\r\n     transform: scaleX(0);\r\n-    transition: scaleX 1s ease-in-out;\r\n+    transition: transform 1s ease-in-out;\r\n }\r\n \r\n #line0 {\r\n     transform: scaleX(1);\r\n"
+                },
+                {
+                    "date": 1670511492716,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,6 +79,6 @@\n     transition: transform 1s ease-in-out;\r\n }\r\n \r\n #line0 {\r\n-    transform: scaleX(1);\r\n+    /* transform: scaleX(1); */\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670511820978,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -75,10 +75,11 @@\n     width: 450px;\r\n     height: 10px;\r\n     background-color: rgb(129, 129, 129);\r\n     transform: scaleX(0);\r\n+    transform: scaleY(0);\r\n     transition: transform 1s ease-in-out;\r\n }\r\n \r\n #line0 {\r\n-    /* transform: scaleX(1); */\r\n+    transform: scaleX(1);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670511832047,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -75,9 +75,8 @@\n     width: 450px;\r\n     height: 10px;\r\n     background-color: rgb(129, 129, 129);\r\n     transform: scaleX(0);\r\n-    transform: scaleY(0);\r\n     transition: transform 1s ease-in-out;\r\n }\r\n \r\n #line0 {\r\n"
+                },
+                {
+                    "date": 1670511843429,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,6 +79,6 @@\n     transition: transform 1s ease-in-out;\r\n }\r\n \r\n #line0 {\r\n-    transform: scaleX(1);\r\n+    /* transform: scaleX(1); */\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670511861197,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -75,8 +75,9 @@\n     width: 450px;\r\n     height: 10px;\r\n     background-color: rgb(129, 129, 129);\r\n     transform: scaleX(0);\r\n+    transform: scaleY(0);\r\n     transition: transform 1s ease-in-out;\r\n }\r\n \r\n #line0 {\r\n"
+                },
+                {
+                    "date": 1670511869131,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -75,9 +75,8 @@\n     width: 450px;\r\n     height: 10px;\r\n     background-color: rgb(129, 129, 129);\r\n     transform: scaleX(0);\r\n-    transform: scaleY(0);\r\n     transition: transform 1s ease-in-out;\r\n }\r\n \r\n #line0 {\r\n"
+                },
+                {
+                    "date": 1670512024794,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,6 +79,6 @@\n     transition: transform 1s ease-in-out;\r\n }\r\n \r\n #line0 {\r\n-    /* transform: scaleX(1); */\r\n+    transform: scaleX(1);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670512031724,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -78,7 +78,7 @@\n     transform: scaleX(0);\r\n     transition: transform 1s ease-in-out;\r\n }\r\n \r\n-#line0 {\r\n+#line1 {\r\n     transform: scaleX(1);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670512044270,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,11 +74,10 @@\n     position: absolute;\r\n     width: 450px;\r\n     height: 10px;\r\n     background-color: rgb(129, 129, 129);\r\n-    transform: scaleX(0);\r\n     transition: transform 1s ease-in-out;\r\n }\r\n \r\n-#line1 {\r\n+#line0 {\r\n     transform: scaleX(1);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670512122288,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -78,6 +78,6 @@\n     transition: transform 1s ease-in-out;\r\n }\r\n \r\n #line0 {\r\n-    transform: scaleX(1);\r\n+    transform: scaleX(1) !important;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670512137486,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -77,7 +77,7 @@\n     background-color: rgb(129, 129, 129);\r\n     transition: transform 1s ease-in-out;\r\n }\r\n \r\n-#line0 {\r\n+#line1 {\r\n     transform: scaleX(1) !important;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670512146389,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -77,7 +77,7 @@\n     background-color: rgb(129, 129, 129);\r\n     transition: transform 1s ease-in-out;\r\n }\r\n \r\n-#line1 {\r\n+#line4 {\r\n     transform: scaleX(1) !important;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670512151800,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -77,7 +77,7 @@\n     background-color: rgb(129, 129, 129);\r\n     transition: transform 1s ease-in-out;\r\n }\r\n \r\n-#line4 {\r\n+#line6 {\r\n     transform: scaleX(1) !important;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670512157245,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -77,7 +77,7 @@\n     background-color: rgb(129, 129, 129);\r\n     transition: transform 1s ease-in-out;\r\n }\r\n \r\n-#line6 {\r\n+#line8 {\r\n     transform: scaleX(1) !important;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670512167130,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -77,7 +77,7 @@\n     background-color: rgb(129, 129, 129);\r\n     transition: transform 1s ease-in-out;\r\n }\r\n \r\n-#line8 {\r\n+#line3 {\r\n     transform: scaleX(1) !important;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670512185306,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -77,7 +77,7 @@\n     background-color: rgb(129, 129, 129);\r\n     transition: transform 1s ease-in-out;\r\n }\r\n \r\n-#line3 {\r\n+#line {\r\n     transform: scaleX(1) !important;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670512283424,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -77,7 +77,7 @@\n     background-color: rgb(129, 129, 129);\r\n     transition: transform 1s ease-in-out;\r\n }\r\n \r\n-#line {\r\n+#line3 {\r\n     transform: scaleX(1) !important;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670512289243,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -78,6 +78,6 @@\n     transition: transform 1s ease-in-out;\r\n }\r\n \r\n #line3 {\r\n-    transform: scaleX(1) !important;\r\n+    transform: scaleX(1);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670515058651,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -77,7 +77,7 @@\n     background-color: rgb(129, 129, 129);\r\n     transition: transform 1s ease-in-out;\r\n }\r\n \r\n-#line3 {\r\n+#line0 {\r\n     transform: scaleX(1);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670515069492,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -78,6 +78,6 @@\n     transition: transform 1s ease-in-out;\r\n }\r\n \r\n #line0 {\r\n-    transform: scaleX(1);\r\n+    transform: scaleX(2);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670515185989,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -77,7 +77,11 @@\n     background-color: rgb(129, 129, 129);\r\n     transition: transform 1s ease-in-out;\r\n }\r\n \r\n+.make-vertical {\r\n+    transform: rotate(90deg) scaleX(0);\r\n+}\r\n+\r\n #line0 {\r\n-    transform: scaleX(2);\r\n+    transform: scaleX(0);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670515230503,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,8 +74,9 @@\n     position: absolute;\r\n     width: 450px;\r\n     height: 10px;\r\n     background-color: rgb(129, 129, 129);\r\n+    transform: scaleX(1);\r\n     transition: transform 1s ease-in-out;\r\n }\r\n \r\n .make-vertical {\r\n"
+                },
+                {
+                    "date": 1670515317681,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,6 +83,6 @@\n     transform: rotate(90deg) scaleX(0);\r\n }\r\n \r\n #line0 {\r\n-    transform: scaleX(0);\r\n+    /* transform: scaleX(0); */\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670515378840,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,9 +79,9 @@\n     transition: transform 1s ease-in-out;\r\n }\r\n \r\n .make-vertical {\r\n-    transform: rotate(90deg) scaleX(0);\r\n+    transform: rotate(90deg) scaleX(1);\r\n }\r\n \r\n #line0 {\r\n     /* transform: scaleX(0); */\r\n"
+                },
+                {
+                    "date": 1670515387477,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,9 +79,9 @@\n     transition: transform 1s ease-in-out;\r\n }\r\n \r\n .make-vertical {\r\n-    transform: rotate(90deg) scaleX(1);\r\n+    transform: rotate(90deg) scaleX(0);\r\n }\r\n \r\n #line0 {\r\n     /* transform: scaleX(0); */\r\n"
+                },
+                {
+                    "date": 1670515397501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,9 +79,9 @@\n     transition: transform 1s ease-in-out;\r\n }\r\n \r\n .make-vertical {\r\n-    transform: rotate(90deg) scaleX(0);\r\n+    transform: rotate(90deg) scaleX(0.8);\r\n }\r\n \r\n #line0 {\r\n     /* transform: scaleX(0); */\r\n"
+                },
+                {
+                    "date": 1670515404256,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,9 +79,9 @@\n     transition: transform 1s ease-in-out;\r\n }\r\n \r\n .make-vertical {\r\n-    transform: rotate(90deg) scaleX(0.8);\r\n+    transform: rotate(90deg) scaleX(1);\r\n }\r\n \r\n #line0 {\r\n     /* transform: scaleX(0); */\r\n"
+                },
+                {
+                    "date": 1670515477217,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,9 +74,9 @@\n     position: absolute;\r\n     width: 450px;\r\n     height: 10px;\r\n     background-color: rgb(129, 129, 129);\r\n-    transform: scaleX(1);\r\n+    transform: scaleX(0);\r\n     transition: transform 1s ease-in-out;\r\n }\r\n \r\n .make-vertical {\r\n"
+                },
+                {
+                    "date": 1670515491296,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,10 +79,10 @@\n     transition: transform 1s ease-in-out;\r\n }\r\n \r\n .make-vertical {\r\n-    transform: rotate(90deg) scaleX(1);\r\n+    transform: rotate(90deg) scaleX(0);\r\n }\r\n \r\n #line0 {\r\n-    /* transform: scaleX(0); */\r\n+    transform: scaleX(1);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670515498138,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -82,7 +82,7 @@\n .make-vertical {\r\n     transform: rotate(90deg) scaleX(0);\r\n }\r\n \r\n-#line0 {\r\n+#line2 {\r\n     transform: scaleX(1);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670515504104,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -82,7 +82,7 @@\n .make-vertical {\r\n     transform: rotate(90deg) scaleX(0);\r\n }\r\n \r\n-#line2 {\r\n+#line4 {\r\n     transform: scaleX(1);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670515536636,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -82,7 +82,7 @@\n .make-vertical {\r\n     transform: rotate(90deg) scaleX(0);\r\n }\r\n \r\n-#line4 {\r\n+#line6 {\r\n     transform: scaleX(1);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670515547763,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -82,7 +82,7 @@\n .make-vertical {\r\n     transform: rotate(90deg) scaleX(0);\r\n }\r\n \r\n-#line6 {\r\n+#line8 {\r\n     transform: scaleX(1);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670515557447,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -82,7 +82,7 @@\n .make-vertical {\r\n     transform: rotate(90deg) scaleX(0);\r\n }\r\n \r\n-#line8 {\r\n+#line5 {\r\n     transform: scaleX(1);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670515563881,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -82,7 +82,7 @@\n .make-vertical {\r\n     transform: rotate(90deg) scaleX(0);\r\n }\r\n \r\n-#line5 {\r\n+#line6 {\r\n     transform: scaleX(1);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670515595980,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,6 +83,6 @@\n     transform: rotate(90deg) scaleX(0);\r\n }\r\n \r\n #line6 {\r\n-    transform: scaleX(1);\r\n+    transform: rotate(45deg) scaleX(1);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670515616305,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,6 +83,6 @@\n     transform: rotate(90deg) scaleX(0);\r\n }\r\n \r\n #line6 {\r\n-    transform: rotate(45deg) scaleX(1);\r\n+    transform: scaleX(1);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670515627834,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,9 +79,9 @@\n     transition: transform 1s ease-in-out;\r\n }\r\n \r\n .make-vertical {\r\n-    transform: rotate(90deg) scaleX(0);\r\n+    transform: rotate(90deg) scaleX(0) !important;\r\n }\r\n \r\n #line6 {\r\n     transform: scaleX(1);\r\n"
+                },
+                {
+                    "date": 1670515634203,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -82,7 +82,7 @@\n .make-vertical {\r\n     transform: rotate(90deg) scaleX(0) !important;\r\n }\r\n \r\n-#line6 {\r\n+#line3 {\r\n     transform: scaleX(1);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670515641933,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -82,7 +82,7 @@\n .make-vertical {\r\n     transform: rotate(90deg) scaleX(0) !important;\r\n }\r\n \r\n-#line3 {\r\n+#line4 {\r\n     transform: scaleX(1);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670515653105,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,6 +83,6 @@\n     transform: rotate(90deg) scaleX(0) !important;\r\n }\r\n \r\n #line4 {\r\n-    transform: scaleX(1);\r\n+    transform: scaleX(1) !important;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670515662195,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,10 +79,10 @@\n     transition: transform 1s ease-in-out;\r\n }\r\n \r\n .make-vertical {\r\n-    transform: rotate(90deg) scaleX(0) !important;\r\n+    transform: rotate(90deg) scaleX(0);\r\n }\r\n \r\n-#line4 {\r\n+#line5 {\r\n     transform: scaleX(1) !important;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670516370721,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,6 +83,6 @@\n     transform: rotate(90deg) scaleX(0);\r\n }\r\n \r\n #line5 {\r\n-    transform: scaleX(1) !important;\r\n+    transform: rotate(90deg) scaleX(1) !important;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670516380192,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -82,7 +82,7 @@\n .make-vertical {\r\n     transform: rotate(90deg) scaleX(0);\r\n }\r\n \r\n-#line5 {\r\n+#line0 {\r\n     transform: rotate(90deg) scaleX(1) !important;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670516388919,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,6 +83,6 @@\n     transform: rotate(90deg) scaleX(0);\r\n }\r\n \r\n #line0 {\r\n-    transform: rotate(90deg) scaleX(1) !important;\r\n+    transform: rotate(40deg) scaleX(1) !important;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670516395612,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,6 +83,6 @@\n     transform: rotate(90deg) scaleX(0);\r\n }\r\n \r\n #line0 {\r\n-    transform: rotate(40deg) scaleX(1) !important;\r\n+    transform: rotate(45deg) scaleX(1) !important;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670516405509,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -82,7 +82,7 @@\n .make-vertical {\r\n     transform: rotate(90deg) scaleX(0);\r\n }\r\n \r\n-#line0 {\r\n+#line1 {\r\n     transform: rotate(45deg) scaleX(1) !important;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670516413399,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -82,7 +82,7 @@\n .make-vertical {\r\n     transform: rotate(90deg) scaleX(0);\r\n }\r\n \r\n-#line1 {\r\n+#line6 {\r\n     transform: rotate(45deg) scaleX(1) !important;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670516434930,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -82,7 +82,7 @@\n .make-vertical {\r\n     transform: rotate(90deg) scaleX(0);\r\n }\r\n \r\n-#line6 {\r\n-    transform: rotate(45deg) scaleX(1) !important;\r\n+#line7 {\r\n+    transform: scaleX(1) !important;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670516441262,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -82,7 +82,7 @@\n .make-vertical {\r\n     transform: rotate(90deg) scaleX(0);\r\n }\r\n \r\n-#line7 {\r\n+#line2 {\r\n     transform: scaleX(1) !important;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670516449596,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -82,7 +82,7 @@\n .make-vertical {\r\n     transform: rotate(90deg) scaleX(0);\r\n }\r\n \r\n-#line2 {\r\n+#line4 {\r\n     transform: scaleX(1) !important;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670517314136,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -82,7 +82,11 @@\n .make-vertical {\r\n     transform: rotate(90deg) scaleX(0);\r\n }\r\n \r\n-#line4 {\r\n+.make-diagonal {\r\n+    transform: rotate(45deg) scaleX(0);\r\n+}\r\n+\r\n+#line3 {\r\n     transform: scaleX(1) !important;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670517349240,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -86,7 +86,7 @@\n .make-diagonal {\r\n     transform: rotate(45deg) scaleX(0);\r\n }\r\n \r\n-#line3 {\r\n+#line0 {\r\n     transform: scaleX(1) !important;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670519438543,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,9 +74,9 @@\n     position: absolute;\r\n     width: 450px;\r\n     height: 10px;\r\n     background-color: rgb(129, 129, 129);\r\n-    transform: scaleX(0);\r\n+    transform: scaleX(1);\r\n     transition: transform 1s ease-in-out;\r\n }\r\n \r\n .make-vertical {\r\n"
+                },
+                {
+                    "date": 1670519447323,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,13 +79,13 @@\n     transition: transform 1s ease-in-out;\r\n }\r\n \r\n .make-vertical {\r\n-    transform: rotate(90deg) scaleX(0);\r\n+    transform: rotate(90deg) scaleX(1);\r\n }\r\n \r\n .make-diagonal {\r\n-    transform: rotate(45deg) scaleX(0);\r\n+    transform: rotate(45deg) scaleX(1);\r\n }\r\n \r\n #line0 {\r\n     transform: scaleX(1) !important;\r\n"
+                },
+                {
+                    "date": 1670519495036,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -86,7 +86,11 @@\n .make-diagonal {\r\n     transform: rotate(45deg) scaleX(1);\r\n }\r\n \r\n+.make-diagonal2 {\r\n+    transform: rotate(45deg) scaleX(1);\r\n+}\r\n+\r\n #line0 {\r\n     transform: scaleX(1) !important;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670519520796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -87,9 +87,10 @@\n     transform: rotate(45deg) scaleX(1);\r\n }\r\n \r\n .make-diagonal2 {\r\n-    transform: rotate(45deg) scaleX(1);\r\n+    transform: rotate(-45deg);\r\n+    transform: scaleX(1);\r\n }\r\n \r\n #line0 {\r\n     transform: scaleX(1) !important;\r\n"
+                },
+                {
+                    "date": 1670519533326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -87,10 +87,9 @@\n     transform: rotate(45deg) scaleX(1);\r\n }\r\n \r\n .make-diagonal2 {\r\n-    transform: rotate(-45deg);\r\n-    transform: scaleX(1);\r\n+    transform: rotate(-45deg) scaleX(1);\r\n }\r\n \r\n #line0 {\r\n     transform: scaleX(1) !important;\r\n"
+                },
+                {
+                    "date": 1670519575966,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,9 +79,9 @@\n     transition: transform 1s ease-in-out;\r\n }\r\n \r\n .make-vertical {\r\n-    transform: rotate(90deg) scaleX(1);\r\n+    transform: rotate(90deg);\r\n }\r\n \r\n .make-diagonal {\r\n     transform: rotate(45deg) scaleX(1);\r\n"
+                },
+                {
+                    "date": 1670519582065,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,9 +74,9 @@\n     position: absolute;\r\n     width: 450px;\r\n     height: 10px;\r\n     background-color: rgb(129, 129, 129);\r\n-    transform: scaleX(1);\r\n+    transform: scaleX(0);\r\n     transition: transform 1s ease-in-out;\r\n }\r\n \r\n .make-vertical {\r\n"
+                },
+                {
+                    "date": 1670519593900,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,14 +74,14 @@\n     position: absolute;\r\n     width: 450px;\r\n     height: 10px;\r\n     background-color: rgb(129, 129, 129);\r\n-    transform: scaleX(0);\r\n+    transform: scaleX(1);\r\n     transition: transform 1s ease-in-out;\r\n }\r\n \r\n .make-vertical {\r\n-    transform: rotate(90deg);\r\n+    transform: rotate(90deg) scaleX(1);\r\n }\r\n \r\n .make-diagonal {\r\n     transform: rotate(45deg) scaleX(1);\r\n"
+                },
+                {
+                    "date": 1670519602116,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,9 +83,9 @@\n     transform: rotate(90deg) scaleX(1);\r\n }\r\n \r\n .make-diagonal {\r\n-    transform: rotate(45deg) scaleX(1);\r\n+    transform: rotate(45deg) scaleX(1.3);\r\n }\r\n \r\n .make-diagonal2 {\r\n     transform: rotate(-45deg) scaleX(1);\r\n"
+                },
+                {
+                    "date": 1670519609667,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -87,9 +87,9 @@\n     transform: rotate(45deg) scaleX(1.3);\r\n }\r\n \r\n .make-diagonal2 {\r\n-    transform: rotate(-45deg) scaleX(1);\r\n+    transform: rotate(-45deg) scaleX(1.3);\r\n }\r\n \r\n #line0 {\r\n     transform: scaleX(1) !important;\r\n"
+                },
+                {
+                    "date": 1670519632725,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,9 +73,9 @@\n .line {\r\n     position: absolute;\r\n     width: 450px;\r\n     height: 10px;\r\n-    background-color: rgb(129, 129, 129);\r\n+    background-color: #81818188;\r\n     transform: scaleX(1);\r\n     transition: transform 1s ease-in-out;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1670519705157,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,8 +70,9 @@\n     background-color: #416080;\r\n }\r\n \r\n .line {\r\n+    display: none;\r\n     position: absolute;\r\n     width: 450px;\r\n     height: 10px;\r\n     background-color: #81818188;\r\n"
+                },
+                {
+                    "date": 1670519717036,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,9 +70,8 @@\n     background-color: #416080;\r\n }\r\n \r\n .line {\r\n-    display: none;\r\n     position: absolute;\r\n     width: 450px;\r\n     height: 10px;\r\n     background-color: #81818188;\r\n"
+                },
+                {
+                    "date": 1670519751908,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,9 +74,9 @@\n     position: absolute;\r\n     width: 450px;\r\n     height: 10px;\r\n     background-color: #81818188;\r\n-    transform: scaleX(1);\r\n+    transform: rotate(0deg) scaleX(1);\r\n     transition: transform 1s ease-in-out;\r\n }\r\n \r\n .make-vertical {\r\n"
+                },
+                {
+                    "date": 1670519777513,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,23 +74,23 @@\n     position: absolute;\r\n     width: 450px;\r\n     height: 10px;\r\n     background-color: #81818188;\r\n-    transform: rotate(0deg) scaleX(1);\r\n+    transform: rotate(0deg) scaleX(0);\r\n     transition: transform 1s ease-in-out;\r\n }\r\n \r\n .make-vertical {\r\n-    transform: rotate(90deg) scaleX(1);\r\n+    transform: rotate(90deg) scaleX(0);\r\n }\r\n \r\n .make-diagonal {\r\n-    transform: rotate(45deg) scaleX(1.3);\r\n+    transform: rotate(45deg) scaleX(0);\r\n }\r\n \r\n .make-diagonal2 {\r\n-    transform: rotate(-45deg) scaleX(1.3);\r\n+    transform: rotate(-45deg) scaleX(0);\r\n }\r\n \r\n #line0 {\r\n-    transform: scaleX(1) !important;\r\n+    transform: scaleX(1);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670519788829,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -90,7 +90,7 @@\n .make-diagonal2 {\r\n     transform: rotate(-45deg) scaleX(0);\r\n }\r\n \r\n-#line0 {\r\n+#line1 {\r\n     transform: scaleX(1);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670519811206,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -90,7 +90,7 @@\n .make-diagonal2 {\r\n     transform: rotate(-45deg) scaleX(0);\r\n }\r\n \r\n-#line1 {\r\n-    transform: scaleX(1);\r\n+#line3 {\r\n+    transform: rotate(0deg) scaleX(1);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670519817142,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -91,6 +91,6 @@\n     transform: rotate(-45deg) scaleX(0);\r\n }\r\n \r\n #line3 {\r\n-    transform: rotate(0deg) scaleX(1);\r\n+    transform: rotate(90deg) scaleX(1);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670519824105,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -90,7 +90,7 @@\n .make-diagonal2 {\r\n     transform: rotate(-45deg) scaleX(0);\r\n }\r\n \r\n-#line3 {\r\n+#line4 {\r\n     transform: rotate(90deg) scaleX(1);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670519838891,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -90,7 +90,7 @@\n .make-diagonal2 {\r\n     transform: rotate(-45deg) scaleX(0);\r\n }\r\n \r\n-#line4 {\r\n+#line6 {\r\n     transform: rotate(90deg) scaleX(1);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670519851478,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -90,7 +90,7 @@\n .make-diagonal2 {\r\n     transform: rotate(-45deg) scaleX(0);\r\n }\r\n \r\n-#line6 {\r\n-    transform: rotate(90deg) scaleX(1);\r\n+#line7 {\r\n+    transform: rotate(-45deg) scaleX(1);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670519895334,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -88,9 +88,5 @@\n }\r\n \r\n .make-diagonal2 {\r\n     transform: rotate(-45deg) scaleX(0);\r\n-}\r\n-\r\n-#line7 {\r\n-    transform: rotate(-45deg) scaleX(1);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670519909474,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,19 +74,19 @@\n     position: absolute;\r\n     width: 450px;\r\n     height: 10px;\r\n     background-color: #81818188;\r\n-    transform: rotate(0deg) scaleX(0);\r\n+    transform: rotate(0deg) scaleX(1);\r\n     transition: transform 1s ease-in-out;\r\n }\r\n \r\n .make-vertical {\r\n-    transform: rotate(90deg) scaleX(0);\r\n+    transform: rotate(90deg) scaleX(1);\r\n }\r\n \r\n .make-diagonal {\r\n-    transform: rotate(45deg) scaleX(0);\r\n+    transform: rotate(45deg) scaleX(1.3);\r\n }\r\n \r\n .make-diagonal2 {\r\n-    transform: rotate(-45deg) scaleX(0);\r\n+    transform: rotate(-45deg) scaleX(1.3);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670519971919,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,8 +70,9 @@\n     background-color: #416080;\r\n }\r\n \r\n .line {\r\n+    display: none;\r\n     position: absolute;\r\n     width: 450px;\r\n     height: 10px;\r\n     background-color: #81818188;\r\n"
+                },
+                {
+                    "date": 1670519988785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,9 +70,8 @@\n     background-color: #416080;\r\n }\r\n \r\n .line {\r\n-    display: none;\r\n     position: absolute;\r\n     width: 450px;\r\n     height: 10px;\r\n     background-color: #81818188;\r\n"
+                },
+                {
+                    "date": 1670520006352,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,8 +32,12 @@\n .players img {\r\n     width: 20px;\r\n }\r\n \r\n+.d-none {\r\n+    display: none;\r\n+}\r\n+\r\n .maincontainer {\r\n     display: flex;\r\n     justify-content: center;\r\n     align-items: center;\r\n"
+                },
+                {
+                    "date": 1670520435165,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n body {\r\n     font-family: sans-serif;\r\n     color: aliceblue;\r\n     background-color: #111;\r\n+    display: flex;\r\n }\r\n \r\n .players {\r\n     display: flex;\r\n"
+                },
+                {
+                    "date": 1670520471306,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,8 @@\n body {\r\n     font-family: sans-serif;\r\n     color: aliceblue;\r\n     background-color: #111;\r\n-    display: flex;\r\n }\r\n \r\n .players {\r\n     display: flex;\r\n"
+                },
+                {
+                    "date": 1670520488562,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,12 @@\n     justify-content: center;\r\n     gap: 20px;\r\n }\r\n \r\n+h1 {\r\n+    text-align: center;\r\n+}\r\n+\r\n #player1,\r\n #player2 {\r\n     display: flex;\r\n     align-items: center;\r\n"
+                },
+                {
+                    "date": 1670520494801,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,9 @@\n }\r\n \r\n h1 {\r\n     text-align: center;\r\n+    margin-top: 100px;\r\n }\r\n \r\n #player1,\r\n #player2 {\r\n"
+                },
+                {
+                    "date": 1670520500147,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n }\r\n \r\n h1 {\r\n     text-align: center;\r\n-    margin-top: 100px;\r\n+    margin-top: 10px;\r\n }\r\n \r\n #player1,\r\n #player2 {\r\n"
+                },
+                {
+                    "date": 1670520509586,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n }\r\n \r\n h1 {\r\n     text-align: center;\r\n-    margin-top: 10px;\r\n+    padding-top: 30px;\r\n }\r\n \r\n #player1,\r\n #player2 {\r\n"
+                },
+                {
+                    "date": 1670520531280,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,8 @@\n     display: flex;\r\n     justify-content: center;\r\n     align-items: center;\r\n     flex-direction: column;\r\n-    height: 100vh;\r\n }\r\n \r\n .gameField {\r\n     position: relative;\r\n"
+                },
+                {
+                    "date": 1670520545583,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,8 +46,9 @@\n     display: flex;\r\n     justify-content: center;\r\n     align-items: center;\r\n     flex-direction: column;\r\n+    margin-top: 50px;\r\n }\r\n \r\n .gameField {\r\n     position: relative;\r\n"
+                },
+                {
+                    "date": 1670520555198,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,8 +27,9 @@\n     display: flex;\r\n     align-items: center;\r\n     gap: 5px;\r\n     font-size: 24px;\r\n+    margin-bottom: 20px;\r\n }\r\n \r\n .inactive {\r\n     opacity: 0.5;\r\n"
+                },
+                {
+                    "date": 1670520626698,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -89,9 +89,9 @@\n     transition: transform 1s ease-in-out;\r\n }\r\n \r\n .make-vertical {\r\n-    transform: rotate(90deg) scaleX(1);\r\n+    transform: rotate(90deg) scaleX(0);\r\n }\r\n \r\n .make-diagonal {\r\n     transform: rotate(45deg) scaleX(1.3);\r\n"
+                },
+                {
+                    "date": 1670520634627,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -84,14 +84,14 @@\n     position: absolute;\r\n     width: 450px;\r\n     height: 10px;\r\n     background-color: #81818188;\r\n-    transform: rotate(0deg) scaleX(1);\r\n+    transform: rotate(0deg) scaleX(0);\r\n     transition: transform 1s ease-in-out;\r\n }\r\n \r\n .make-vertical {\r\n-    transform: rotate(90deg) scaleX(0);\r\n+    transform: rotate(90deg) scaleX(1);\r\n }\r\n \r\n .make-diagonal {\r\n     transform: rotate(45deg) scaleX(1.3);\r\n"
+                },
+                {
+                    "date": 1670520752857,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -84,9 +84,9 @@\n     position: absolute;\r\n     width: 450px;\r\n     height: 10px;\r\n     background-color: #81818188;\r\n-    transform: rotate(0deg) scaleX(0);\r\n+    transform: rotate(0deg) scaleX(1);\r\n     transition: transform 1s ease-in-out;\r\n }\r\n \r\n .make-vertical {\r\n"
+                },
+                {
+                    "date": 1670525129831,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -98,5 +98,9 @@\n }\r\n \r\n .make-diagonal2 {\r\n     transform: rotate(-45deg) scaleX(1.3);\r\n+}\r\n+\r\n+.gameover {\r\n+    position: absolute;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670525141754,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -102,5 +102,6 @@\n }\r\n \r\n .gameover {\r\n     position: absolute;\r\n+    top: 0;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670525160115,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -102,6 +102,6 @@\n }\r\n \r\n .gameover {\r\n     position: absolute;\r\n-    top: 0;\r\n+    margin: 0 auto;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670525165625,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -102,6 +102,6 @@\n }\r\n \r\n .gameover {\r\n     position: absolute;\r\n-    margin: 0 auto;\r\n+    margin: auto 0;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670525184822,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -102,6 +102,9 @@\n }\r\n \r\n .gameover {\r\n     position: absolute;\r\n-    margin: auto 0;\r\n+    top: 0;\r\n+    bottom: 0;\r\n+    left: 0;\r\n+    right: 0;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670525214137,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -106,5 +106,6 @@\n     top: 0;\r\n     bottom: 0;\r\n     left: 0;\r\n     right: 0;\r\n+    width: 100%;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670525228599,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -106,6 +106,6 @@\n     top: 0;\r\n     bottom: 0;\r\n     left: 0;\r\n     right: 0;\r\n-    width: 100%;\r\n+    width: 80%;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670525244570,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -106,6 +106,5 @@\n     top: 0;\r\n     bottom: 0;\r\n     left: 0;\r\n     right: 0;\r\n-    width: 80%;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670525260356,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -102,9 +102,5 @@\n }\r\n \r\n .gameover {\r\n     position: absolute;\r\n-    top: 0;\r\n-    bottom: 0;\r\n-    left: 0;\r\n-    right: 0;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670525302591,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -101,6 +101,6 @@\n     transform: rotate(-45deg) scaleX(1.3);\r\n }\r\n \r\n .gameover {\r\n-    position: absolute;\r\n+    display: flex;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670525309239,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -101,6 +101,7 @@\n     transform: rotate(-45deg) scaleX(1.3);\r\n }\r\n \r\n .gameover {\r\n+    position: absolute;\r\n     display: flex;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670525320204,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -102,6 +102,8 @@\n }\r\n \r\n .gameover {\r\n     position: absolute;\r\n+    top: 0;\r\n     display: flex;\r\n+    justify-content: center;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670525330725,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -101,9 +101,9 @@\n     transform: rotate(-45deg) scaleX(1.3);\r\n }\r\n \r\n .gameover {\r\n-    position: absolute;\r\n+    position: fixed;\r\n     top: 0;\r\n     display: flex;\r\n     justify-content: center;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670525337642,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -105,5 +105,6 @@\n     position: fixed;\r\n     top: 0;\r\n     display: flex;\r\n     justify-content: center;\r\n+    align-items: center;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670525343888,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -106,5 +106,6 @@\n     top: 0;\r\n     display: flex;\r\n     justify-content: center;\r\n     align-items: center;\r\n+    width: 100%;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670525349491,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -107,5 +107,6 @@\n     display: flex;\r\n     justify-content: center;\r\n     align-items: center;\r\n     width: 100%;\r\n+    height: 100vh;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670525368182,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,8 +48,9 @@\n     justify-content: center;\r\n     align-items: center;\r\n     flex-direction: column;\r\n     margin-top: 50px;\r\n+    height: 100vh;\r\n }\r\n \r\n .gameField {\r\n     position: relative;\r\n"
+                },
+                {
+                    "date": 1670525384667,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,9 @@\n     gap: 20px;\r\n }\r\n \r\n h1 {\r\n+    position: absolute;\r\n     text-align: center;\r\n     padding-top: 30px;\r\n }\r\n \r\n"
+                }
+            ],
+            "date": 1670506844533,
+            "name": "Commit-0",
+            "content": "* {\r\n    margin: 0;\r\n    padding: 0;\r\n    box-sizing: border-box;\r\n}\r\n\r\nbody {\r\n    font-family: sans-serif;\r\n    color: aliceblue;\r\n    background-color: #111;\r\n}\r\n\r\n.players img {\r\n    width: 20px;\r\n}\r\n\r\n.maincontainer {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    flex-direction: column;\r\n    height: 100vh;\r\n}\r\n\r\n.gameField {\r\n    width: 500px;\r\n    height: 500px;\r\n    margin: 0 auto;\r\n    background-color: #34495e;\r\n    color: #fff;\r\n    border: 6px solid #2c3e50;\r\n    border-radius: 10px;\r\n    display: grid;\r\n    grid-template: repeat(3, 1fr) / repeat(3, 1fr);\r\n}\r\n\r\n.box {\r\n    border: 6px solid #2c3e50;\r\n    border-radius: 2px;\r\n    font-family: Helvetica;\r\n    font-weight: bold;\r\n    font-size: 4em;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    cursor: pointer;\r\n}\r\n\r\n.box:hover {\r\n    background-color: #416080;\r\n}"
+        }
+    ]
+}

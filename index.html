@@ -13,8 +13,15 @@
 </head>
 
 <body>
-    <h1>Tic Tac Toe</h1>
     <div class="maincontainer">
+        <div class="players">
+            <div id="player1" class="">
+                <img src="src/img/cross.png" /> Player 1
+            </div>
+            <div id="player2" class="inactive">
+                <img src="src/img/circle.png" /> Player 2
+            </div>
+        </div>
         <div class="gameField">
             <div class="box" id="0" onclick="playerPlace(0)">0</div>
             <div class="box" id="1" onclick="playerPlace(1)">1</div>
@@ -25,7 +32,20 @@
             <div class="box" id="6" onclick="playerPlace(6)">6</div>
             <div class="box" id="7" onclick="playerPlace(7)">7</div>
             <div class="box" id="8" onclick="playerPlace(8)">8</div>
+            <div class="lines">
+                <div id="line0" class="line d-none" style="top: 75px; left: 20px"></div>
+                <div id="line1" class="line d-none" style="top: 240px; left: 20px"></div>
+                <div id="line2" class="line d-none" style="top: 400px; left: 20px"></div>
+                <div id="line3" class="line d-none make-vertical" style="top: 240px; right: 182px"></div>
+                <div id="line4" class="line d-none make-vertical" style="top: 240px; right: 20px"></div>
+                <div id="line5" class="line d-none make-vertical" style="top: 240px; left: 180px"></div>
+                <div id="line6" class="line d-none make-diagonal" style="top: 240px; right: 20px"></div>
+                <div id="line7" class="line d-none make-diagonal2" style="top: 240px; right: 20px"></div>
+            </div>
         </div>
+    </div>
+    <div class="gameover">
+        <img src="src/img/gameover.png" />
     </div>
 </body>
 

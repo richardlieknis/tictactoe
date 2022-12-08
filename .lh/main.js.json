@@ -1,0 +1,94 @@
+{
+    "sourceFile": "main.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 19,
+            "patches": [
+                {
+                    "date": 1670507132949,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1670507200659,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,8 +26,10 @@\n             fields[id] = 'circle';\r\n             fieldHtml.innerHTML = `<img src=\"src/img/circle.png\">`;\r\n             checkWin();\r\n             currentPlayer = 'cross';\r\n+            player1.classList.remove('inactive');\r\n+            player2.classList.add('inactive');\r\n         } else if (currentPlayer === 'cross') {\r\n             fields[id] = 'cross';\r\n             fieldHtml.innerHTML = `<img src=\"src/img/cross.png\">`;\r\n             checkWin();\r\n"
+                },
+                {
+                    "date": 1670507208139,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,8 +33,10 @@\n             fields[id] = 'cross';\r\n             fieldHtml.innerHTML = `<img src=\"src/img/cross.png\">`;\r\n             checkWin();\r\n             currentPlayer = 'circle';\r\n+            player2.classList.remove('inactive');\r\n+            player1.classList.add('inactive');\r\n         }\r\n     }\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1670507316792,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,17 +26,17 @@\n             fields[id] = 'circle';\r\n             fieldHtml.innerHTML = `<img src=\"src/img/circle.png\">`;\r\n             checkWin();\r\n             currentPlayer = 'cross';\r\n-            player1.classList.remove('inactive');\r\n-            player2.classList.add('inactive');\r\n+            player1.classList.remove('.inactive');\r\n+            player2.classList.add('.inactive');\r\n         } else if (currentPlayer === 'cross') {\r\n             fields[id] = 'cross';\r\n             fieldHtml.innerHTML = `<img src=\"src/img/cross.png\">`;\r\n             checkWin();\r\n             currentPlayer = 'circle';\r\n-            player2.classList.remove('inactive');\r\n-            player1.classList.add('inactive');\r\n+            player2.classList.remove('.inactive');\r\n+            player1.classList.add('.inactive');\r\n         }\r\n     }\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1670507721311,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,16 +26,16 @@\n             fields[id] = 'circle';\r\n             fieldHtml.innerHTML = `<img src=\"src/img/circle.png\">`;\r\n             checkWin();\r\n             currentPlayer = 'cross';\r\n-            player1.classList.remove('.inactive');\r\n+            //player1.classList.remove('.inactive');\r\n             player2.classList.add('.inactive');\r\n         } else if (currentPlayer === 'cross') {\r\n             fields[id] = 'cross';\r\n             fieldHtml.innerHTML = `<img src=\"src/img/cross.png\">`;\r\n             checkWin();\r\n             currentPlayer = 'circle';\r\n-            player2.classList.remove('.inactive');\r\n+            //player2.classList.remove('.inactive');\r\n             player1.classList.add('.inactive');\r\n         }\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1670508332362,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const circle = document.getElementById('circle');\r\n const cross = document.getElementById('cross');\r\n const gameover = document.getElementById('gameover');\r\n-const player1 = document.getElementById('player1');\r\n-const player2 = document.getElementById('player2');\r\n+let player1 = document.getElementById('player1');\r\n+let player2 = document.getElementById('player2');\r\n \r\n let fields = [0, 1, 2, 3, 4, 5, 6, 7, 8];\r\n let currentPlayer = 'cross';\r\n let win = false;\r\n"
+                },
+                {
+                    "date": 1670508403551,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,7 @@\n const circle = document.getElementById('circle');\r\n const cross = document.getElementById('cross');\r\n const gameover = document.getElementById('gameover');\r\n-let player1 = document.getElementById('player1');\r\n-let player2 = document.getElementById('player2');\r\n \r\n let fields = [0, 1, 2, 3, 4, 5, 6, 7, 8];\r\n let currentPlayer = 'cross';\r\n let win = false;\r\n@@ -26,17 +24,14 @@\n             fields[id] = 'circle';\r\n             fieldHtml.innerHTML = `<img src=\"src/img/circle.png\">`;\r\n             checkWin();\r\n             currentPlayer = 'cross';\r\n-            //player1.classList.remove('.inactive');\r\n-            player2.classList.add('.inactive');\r\n+            document.getElementById('player2').classList.remove('.inactive');\r\n         } else if (currentPlayer === 'cross') {\r\n             fields[id] = 'cross';\r\n             fieldHtml.innerHTML = `<img src=\"src/img/cross.png\">`;\r\n             checkWin();\r\n             currentPlayer = 'circle';\r\n-            //player2.classList.remove('.inactive');\r\n-            player1.classList.add('.inactive');\r\n         }\r\n     }\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1670508416600,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n             fields[id] = 'circle';\r\n             fieldHtml.innerHTML = `<img src=\"src/img/circle.png\">`;\r\n             checkWin();\r\n             currentPlayer = 'cross';\r\n-            document.getElementById('player2').classList.remove('.inactive');\r\n+            document.getElementById('player2').classList.remove('inactive');\r\n         } else if (currentPlayer === 'cross') {\r\n             fields[id] = 'cross';\r\n             fieldHtml.innerHTML = `<img src=\"src/img/cross.png\">`;\r\n             checkWin();\r\n"
+                },
+                {
+                    "date": 1670508463306,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,9 @@\n             fieldHtml.innerHTML = `<img src=\"src/img/circle.png\">`;\r\n             checkWin();\r\n             currentPlayer = 'cross';\r\n             document.getElementById('player2').classList.remove('inactive');\r\n+            document.getElementById('player1').classList.add('inactive');\r\n         } else if (currentPlayer === 'cross') {\r\n             fields[id] = 'cross';\r\n             fieldHtml.innerHTML = `<img src=\"src/img/cross.png\">`;\r\n             checkWin();\r\n"
+                },
+                {
+                    "date": 1670508478483,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,8 +31,10 @@\n             fields[id] = 'cross';\r\n             fieldHtml.innerHTML = `<img src=\"src/img/cross.png\">`;\r\n             checkWin();\r\n             currentPlayer = 'circle';\r\n+            document.getElementById('player1').classList.remove('inactive');\r\n+            document.getElementById('player2').classList.add('inactive');\r\n         }\r\n     }\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1670508491364,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,17 +24,17 @@\n             fields[id] = 'circle';\r\n             fieldHtml.innerHTML = `<img src=\"src/img/circle.png\">`;\r\n             checkWin();\r\n             currentPlayer = 'cross';\r\n-            document.getElementById('player2').classList.remove('inactive');\r\n-            document.getElementById('player1').classList.add('inactive');\r\n+            document.getElementById('player1').classList.remove('inactive');\r\n+            document.getElementById('player2').classList.add('inactive');\r\n         } else if (currentPlayer === 'cross') {\r\n             fields[id] = 'cross';\r\n             fieldHtml.innerHTML = `<img src=\"src/img/cross.png\">`;\r\n             checkWin();\r\n             currentPlayer = 'circle';\r\n-            document.getElementById('player1').classList.remove('inactive');\r\n-            document.getElementById('player2').classList.add('inactive');\r\n+            document.getElementById('player2').classList.remove('inactive');\r\n+            document.getElementById('player1').classList.add('inactive');\r\n         }\r\n     }\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1670520153269,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,8 +43,9 @@\n         if (fields[winFields[i][0]] === fields[winFields[i][1]] &&\r\n             fields[winFields[i][1]] === fields[winFields[i][2]]) {\r\n             console.log(\"GEWONNEN:\", currentPlayer);\r\n             win = true;\r\n+            document.getElementById(\"line0\").classList.remove('d-none');\r\n         }\r\n     }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1670520175972,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n         if (fields[winFields[i][0]] === fields[winFields[i][1]] &&\r\n             fields[winFields[i][1]] === fields[winFields[i][2]]) {\r\n             console.log(\"GEWONNEN:\", currentPlayer);\r\n             win = true;\r\n-            document.getElementById(\"line0\").classList.remove('d-none');\r\n+            document.getElementById(\"line1\").classList.remove('d-none');\r\n         }\r\n     }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1670520236305,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n         if (fields[winFields[i][0]] === fields[winFields[i][1]] &&\r\n             fields[winFields[i][1]] === fields[winFields[i][2]]) {\r\n             console.log(\"GEWONNEN:\", currentPlayer);\r\n             win = true;\r\n-            document.getElementById(\"line1\").classList.remove('d-none');\r\n+            document.getElementById(`line${i}`).classList.remove('d-none');\r\n         }\r\n     }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1670520690123,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,8 +44,9 @@\n             fields[winFields[i][1]] === fields[winFields[i][2]]) {\r\n             console.log(\"GEWONNEN:\", currentPlayer);\r\n             win = true;\r\n             document.getElementById(`line${i}`).classList.remove('d-none');\r\n+            document.getElementById(`line${i}`).style.transform = \"scaleX(1)\";\r\n         }\r\n     }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1670520707469,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n             fields[winFields[i][1]] === fields[winFields[i][2]]) {\r\n             console.log(\"GEWONNEN:\", currentPlayer);\r\n             win = true;\r\n             document.getElementById(`line${i}`).classList.remove('d-none');\r\n-            document.getElementById(`line${i}`).style.transform = \"scaleX(1)\";\r\n+            document.getElementById(`line${i}`).style.transform = \"scaleX(0.5)\";\r\n         }\r\n     }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1670520749017,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,8 @@\n             fields[winFields[i][1]] === fields[winFields[i][2]]) {\r\n             console.log(\"GEWONNEN:\", currentPlayer);\r\n             win = true;\r\n             document.getElementById(`line${i}`).classList.remove('d-none');\r\n-            document.getElementById(`line${i}`).style.transform = \"scaleX(0.5)\";\r\n         }\r\n     }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1670524093948,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,11 +23,9 @@\n         if (currentPlayer === 'circle') {\r\n             fields[id] = 'circle';\r\n             fieldHtml.innerHTML = `<img src=\"src/img/circle.png\">`;\r\n             checkWin();\r\n-            currentPlayer = 'cross';\r\n-            document.getElementById('player1').classList.remove('inactive');\r\n-            document.getElementById('player2').classList.add('inactive');\r\n+\r\n         } else if (currentPlayer === 'cross') {\r\n             fields[id] = 'cross';\r\n             fieldHtml.innerHTML = `<img src=\"src/img/cross.png\">`;\r\n             checkWin();\r\n@@ -37,8 +35,16 @@\n         }\r\n     }\r\n }\r\n \r\n+function setCurrentPlayer(player) {\r\n+    if (player === 'circle') {\r\n+        currentPlayer = 'cross';\r\n+        document.getElementById('player1').classList.remove('inactive');\r\n+        document.getElementById('player2').classList.add('inactive');\r\n+    }\r\n+}\r\n+\r\n function checkWin() {\r\n     for (let i = 0; i < winFields.length; i++) {\r\n         if (fields[winFields[i][0]] === fields[winFields[i][1]] &&\r\n             fields[winFields[i][1]] === fields[winFields[i][2]]) {\r\n"
+                },
+                {
+                    "date": 1670524129262,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,16 +23,15 @@\n         if (currentPlayer === 'circle') {\r\n             fields[id] = 'circle';\r\n             fieldHtml.innerHTML = `<img src=\"src/img/circle.png\">`;\r\n             checkWin();\r\n+            setCurrentPlayer(currentPlayer);\r\n \r\n         } else if (currentPlayer === 'cross') {\r\n             fields[id] = 'cross';\r\n             fieldHtml.innerHTML = `<img src=\"src/img/cross.png\">`;\r\n             checkWin();\r\n-            currentPlayer = 'circle';\r\n-            document.getElementById('player2').classList.remove('inactive');\r\n-            document.getElementById('player1').classList.add('inactive');\r\n+\r\n         }\r\n     }\r\n }\r\n \r\n@@ -40,9 +39,14 @@\n     if (player === 'circle') {\r\n         currentPlayer = 'cross';\r\n         document.getElementById('player1').classList.remove('inactive');\r\n         document.getElementById('player2').classList.add('inactive');\r\n+    } else if (player === 'cross') {\r\n+        currentPlayer = 'circle';\r\n+        document.getElementById('player2').classList.remove('inactive');\r\n+        document.getElementById('player1').classList.add('inactive');\r\n     }\r\n+\r\n }\r\n \r\n function checkWin() {\r\n     for (let i = 0; i < winFields.length; i++) {\r\n"
+                },
+                {
+                    "date": 1670524135605,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,8 +29,9 @@\n         } else if (currentPlayer === 'cross') {\r\n             fields[id] = 'cross';\r\n             fieldHtml.innerHTML = `<img src=\"src/img/cross.png\">`;\r\n             checkWin();\r\n+            setCurrentPlayer(currentPlayer);\r\n \r\n         }\r\n     }\r\n }\r\n"
+                }
+            ],
+            "date": 1670507132949,
+            "name": "Commit-0",
+            "content": "const circle = document.getElementById('circle');\r\nconst cross = document.getElementById('cross');\r\nconst gameover = document.getElementById('gameover');\r\nconst player1 = document.getElementById('player1');\r\nconst player2 = document.getElementById('player2');\r\n\r\nlet fields = [0, 1, 2, 3, 4, 5, 6, 7, 8];\r\nlet currentPlayer = 'cross';\r\nlet win = false;\r\n\r\nlet winFields = [\r\n    [0, 1, 2],\r\n    [3, 4, 5],\r\n    [6, 7, 8],\r\n    [0, 3, 6],\r\n    [1, 4, 7],\r\n    [2, 5, 8],\r\n    [0, 4, 8],\r\n    [2, 4, 6]\r\n]\r\n\r\nfunction playerPlace(id) {\r\n    let fieldHtml = document.getElementById(id);\r\n    if (fields[id] < 9 && !win) {\r\n        if (currentPlayer === 'circle') {\r\n            fields[id] = 'circle';\r\n            fieldHtml.innerHTML = `<img src=\"src/img/circle.png\">`;\r\n            checkWin();\r\n            currentPlayer = 'cross';\r\n        } else if (currentPlayer === 'cross') {\r\n            fields[id] = 'cross';\r\n            fieldHtml.innerHTML = `<img src=\"src/img/cross.png\">`;\r\n            checkWin();\r\n            currentPlayer = 'circle';\r\n        }\r\n    }\r\n}\r\n\r\nfunction checkWin() {\r\n    for (let i = 0; i < winFields.length; i++) {\r\n        if (fields[winFields[i][0]] === fields[winFields[i][1]] &&\r\n            fields[winFields[i][1]] === fields[winFields[i][2]]) {\r\n            console.log(\"GEWONNEN:\", currentPlayer);\r\n            win = true;\r\n        }\r\n    }\r\n\r\n}\r\n\r\nfunction resetGame() {\r\n    win = false;\r\n    for (let i = 0; i < 9; i++) {\r\n        let fieldHtml = document.getElementById(i);\r\n        fields = [0, 1, 2, 3, 4, 5, 6, 7, 8];\r\n        fieldHtml.innerHTML = \"\";\r\n    }\r\n}"
+        }
+    ]
+}

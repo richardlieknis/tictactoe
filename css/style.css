@@ -1,6 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    color: aliceblue;
+    background-color: #111;
+}
+
+.players {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+h1 {
+    position: absolute;
+    text-align: center;
+    padding-top: 30px;
+}
+
+#player1,
+#player2 {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.inactive {
+    opacity: 0.5;
+}
+
+.players img {
+    width: 20px;
+}
+
+.d-none {
+    display: none;
+}
+
+.maincontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    height: 100vh;
+}
+
 .gameField {
-    width: 600px;
-    height: 600px;
+    position: relative;
+    width: 500px;
+    height: 500px;
     margin: 0 auto;
     background-color: #34495e;
     color: #fff;
@@ -24,4 +80,35 @@
 
 .box:hover {
     background-color: #416080;
+}
+
+.line {
+    position: absolute;
+    width: 450px;
+    height: 10px;
+    background-color: #81818188;
+    transform: rotate(0deg) scaleX(1);
+    transition: transform 1s ease-in-out;
+}
+
+.make-vertical {
+    transform: rotate(90deg) scaleX(1);
+}
+
+.make-diagonal {
+    transform: rotate(45deg) scaleX(1.3);
+}
+
+.make-diagonal2 {
+    transform: rotate(-45deg) scaleX(1.3);
+}
+
+.gameover {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
 }
