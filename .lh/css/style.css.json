@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 186,
+            "activePatchIndex": 188,
             "patches": [
                 {
                     "date": 1670506844533,
@@ -752,6 +752,14 @@
                 {
                     "date": 1670533161322,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -132,8 +132,12 @@\n     justify-content: center;\r\n     align-items: center;\r\n }\r\n \r\n+.gameover div:hover {\r\n+    background-color: #3f6892;\r\n+}\r\n+\r\n #winner {\r\n     font-size: 22px;\r\n     text-transform: uppercase;\r\n     background: -webkit-linear-gradient(#eee, #fff4);\r\n"
+                },
+                {
+                    "date": 1670536233859,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -140,7 +140,7 @@\n #winner {\r\n     font-size: 22px;\r\n     text-transform: uppercase;\r\n     background: -webkit-linear-gradient(#eee, #fff4);\r\n-    -webkit-background-clip: text;\r\n+    background-clip: text;\r\n     -webkit-text-fill-color: transparent;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670536248905,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -140,7 +140,7 @@\n #winner {\r\n     font-size: 22px;\r\n     text-transform: uppercase;\r\n     background: -webkit-linear-gradient(#eee, #fff4);\r\n-    background-clip: text;\r\n+    -webkit-background-clip: text;\r\n     -webkit-text-fill-color: transparent;\r\n }\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1670506844533,

@@ -4,7 +4,7 @@ const gameover = document.getElementById('gameover');
 const winSound = new Audio('src/audio/win.mp3');
 const drawSound = new Audio('src/audio/draw.mp3');
 
-let fields = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let fields = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 let currentPlayer = 'cross';
 let win = false;
 let counter = 0;
@@ -23,7 +23,7 @@ let winFields = [
 function playerPlace(id) {
     counter++;
     let fieldHtml = document.getElementById(id);
-    if (fields[id] < 10 && !win) {
+    if (fields[id] < 9 && !win) {
         if (currentPlayer === 'circle') {
             fields[id] = 'circle';
             fieldHtml.innerHTML = `<img src="src/img/circle.png">`;
@@ -96,6 +96,7 @@ function resetGame() {
         let fieldHtml = document.getElementById(i);
         fields = [0, 1, 2, 3, 4, 5, 6, 7, 8];
         fieldHtml.innerHTML = "";
+        counter = 0;
         document.getElementById('gameover').style.scale = 0;
         document.getElementById(`line${i}`).classList.add('d-none');
 
