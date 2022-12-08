@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 49,
+            "activePatchIndex": 67,
             "patches": [
                 {
                     "date": 1670507132949,
@@ -204,6 +204,78 @@
                 {
                     "date": 1670533421862,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,8 @@\n                 document.getElementById('gameover').style.scale = .85;\r\n                 showWinner();\r\n                 winSound.play();\r\n             }, 800);\r\n-\r\n         }\r\n     }\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1670533991581,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,8 +35,12 @@\n             setCurrentPlayer(currentPlayer);\r\n \r\n         }\r\n     }\r\n+\r\n+    if (!fields.some(isNaN)) {\r\n+        console.log(\"draw\");\r\n+    }\r\n }\r\n \r\n function setCurrentPlayer(player) {\r\n     if (player === 'circle') {\r\n"
+                },
+                {
+                    "date": 1670534085244,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n \r\n         }\r\n     }\r\n \r\n-    if (!fields.some(isNaN)) {\r\n+    if (fields.some(isNaN)) {\r\n         console.log(\"draw\");\r\n     }\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1670534893019,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n const gameover = document.getElementById('gameover');\r\n const winSound = new Audio('src/audio/win.mp3');\r\n const drawSound = new Audio('src/audio/draw.mp3');\r\n \r\n-let fields = [0, 1, 2, 3, 4, 5, 6, 7, 8];\r\n+let fields = [1, 1, 1, 1, 1, 1, 1, 1, 1];\r\n let currentPlayer = 'cross';\r\n let win = false;\r\n \r\n let winFields = [\r\n"
+                },
+                {
+                    "date": 1670534903948,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n ]\r\n \r\n function playerPlace(id) {\r\n     let fieldHtml = document.getElementById(id);\r\n-    if (fields[id] < 9 && !win) {\r\n+    if (fields[id] < 1 && !win) {\r\n         if (currentPlayer === 'circle') {\r\n             fields[id] = 'circle';\r\n             fieldHtml.innerHTML = `<img src=\"src/img/circle.png\">`;\r\n             checkWin();\r\n"
+                },
+                {
+                    "date": 1670534911149,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n ]\r\n \r\n function playerPlace(id) {\r\n     let fieldHtml = document.getElementById(id);\r\n-    if (fields[id] < 1 && !win) {\r\n+    if (fields[id] < 2 && !win) {\r\n         if (currentPlayer === 'circle') {\r\n             fields[id] = 'circle';\r\n             fieldHtml.innerHTML = `<img src=\"src/img/circle.png\">`;\r\n             checkWin();\r\n"
+                },
+                {
+                    "date": 1670534940131,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n const gameover = document.getElementById('gameover');\r\n const winSound = new Audio('src/audio/win.mp3');\r\n const drawSound = new Audio('src/audio/draw.mp3');\r\n \r\n-let fields = [1, 1, 1, 1, 1, 1, 1, 1, 1];\r\n+let fields = [1, 2, 3, 4, 5, 6, 7, 8, 9];\r\n let currentPlayer = 'cross';\r\n let win = false;\r\n \r\n let winFields = [\r\n"
+                },
+                {
+                    "date": 1670534948861,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n ]\r\n \r\n function playerPlace(id) {\r\n     let fieldHtml = document.getElementById(id);\r\n-    if (fields[id] < 2 && !win) {\r\n+    if (fields[id] < 10 && !win) {\r\n         if (currentPlayer === 'circle') {\r\n             fields[id] = 'circle';\r\n             fieldHtml.innerHTML = `<img src=\"src/img/circle.png\">`;\r\n             checkWin();\r\n"
+                },
+                {
+                    "date": 1670535037090,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n \r\n let fields = [1, 2, 3, 4, 5, 6, 7, 8, 9];\r\n let currentPlayer = 'cross';\r\n let win = false;\r\n+let counter = 0;\r\n \r\n let winFields = [\r\n     [0, 1, 2],\r\n     [3, 4, 5],\r\n"
+                },
+                {
+                    "date": 1670535059806,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,8 +20,9 @@\n     [2, 4, 6]\r\n ]\r\n \r\n function playerPlace(id) {\r\n+    counter++;\r\n     let fieldHtml = document.getElementById(id);\r\n     if (fields[id] < 10 && !win) {\r\n         if (currentPlayer === 'circle') {\r\n             fields[id] = 'circle';\r\n@@ -37,9 +38,9 @@\n \r\n         }\r\n     }\r\n \r\n-    if (fields.some(isNaN)) {\r\n+    if (counter === 9) {\r\n         console.log(\"draw\");\r\n     }\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1670535130101,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n \r\n         }\r\n     }\r\n \r\n-    if (counter === 9) {\r\n+    if (counter === 9 && !win) {\r\n         console.log(\"draw\");\r\n     }\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1670535258510,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,18 +63,21 @@\n             fields[winFields[i][1]] === fields[winFields[i][2]]) {\r\n             console.log(\"GEWONNEN:\", currentPlayer);\r\n             win = true;\r\n             document.getElementById(`line${i}`).classList.remove('d-none');\r\n-\r\n-            setTimeout(function() {\r\n-                document.getElementById('gameover').style.scale = .85;\r\n-                showWinner();\r\n-                winSound.play();\r\n-            }, 800);\r\n+            showGameover();\r\n         }\r\n     }\r\n }\r\n \r\n+function showGameover() {\r\n+    setTimeout(function() {\r\n+        document.getElementById('gameover').style.scale = .85;\r\n+        showWinner();\r\n+        winSound.play();\r\n+    }, 800);\r\n+}\r\n+\r\n function showWinner() {\r\n     if (currentPlayer === 'circle') {\r\n         document.getElementById(\"winner\").innerHTML = 'Player 1 won!'\r\n     } else if (currentPlayer === 'cross') {\r\n"
+                },
+                {
+                    "date": 1670535295461,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n         }\r\n     }\r\n \r\n     if (counter === 9 && !win) {\r\n-        console.log(\"draw\");\r\n+        showGameover(true);\r\n     }\r\n }\r\n \r\n function setCurrentPlayer(player) {\r\n@@ -68,9 +68,9 @@\n         }\r\n     }\r\n }\r\n \r\n-function showGameover() {\r\n+function showGameover(draw) {\r\n     setTimeout(function() {\r\n         document.getElementById('gameover').style.scale = .85;\r\n         showWinner();\r\n         winSound.play();\r\n"
+                },
+                {
+                    "date": 1670535324664,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -71,9 +71,9 @@\n \r\n function showGameover(draw) {\r\n     setTimeout(function() {\r\n         document.getElementById('gameover').style.scale = .85;\r\n-        showWinner();\r\n+        showWinner(draw);\r\n         winSound.play();\r\n     }, 800);\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1670535350477,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -76,13 +76,15 @@\n         winSound.play();\r\n     }, 800);\r\n }\r\n \r\n-function showWinner() {\r\n-    if (currentPlayer === 'circle') {\r\n-        document.getElementById(\"winner\").innerHTML = 'Player 1 won!'\r\n-    } else if (currentPlayer === 'cross') {\r\n-        document.getElementById(\"winner\").innerHTML = 'Player 2 won!'\r\n+function showWinner(draw) {\r\n+    if (!draw) {\r\n+        if (currentPlayer === 'circle') {\r\n+            document.getElementById(\"winner\").innerHTML = 'Player 1 won!'\r\n+        } else if (currentPlayer === 'cross') {\r\n+            document.getElementById(\"winner\").innerHTML = 'Player 2 won!'\r\n+        }\r\n     }\r\n }\r\n \r\n function resetGame() {\r\n"
+                },
+                {
+                    "date": 1670535378060,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,9 +83,9 @@\n             document.getElementById(\"winner\").innerHTML = 'Player 1 won!'\r\n         } else if (currentPlayer === 'cross') {\r\n             document.getElementById(\"winner\").innerHTML = 'Player 2 won!'\r\n         }\r\n-    }\r\n+    } else document.getElementById(\"winner\").innerHTML = 'DRAW'\r\n }\r\n \r\n function resetGame() {\r\n     win = false;\r\n"
+                },
+                {
+                    "date": 1670535476094,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,8 @@\n function checkWin() {\r\n     for (let i = 0; i < winFields.length; i++) {\r\n         if (fields[winFields[i][0]] === fields[winFields[i][1]] &&\r\n             fields[winFields[i][1]] === fields[winFields[i][2]]) {\r\n-            console.log(\"GEWONNEN:\", currentPlayer);\r\n             win = true;\r\n             document.getElementById(`line${i}`).classList.remove('d-none');\r\n             showGameover();\r\n         }\r\n"
+                },
+                {
+                    "date": 1670535483729,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,8 @@\n             fields[id] = 'cross';\r\n             fieldHtml.innerHTML = `<img src=\"src/img/cross.png\">`;\r\n             checkWin();\r\n             setCurrentPlayer(currentPlayer);\r\n-\r\n         }\r\n     }\r\n \r\n     if (counter === 9 && !win) {\r\n"
+                },
+                {
+                    "date": 1670535555233,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,20 +70,25 @@\n function showGameover(draw) {\r\n     setTimeout(function() {\r\n         document.getElementById('gameover').style.scale = .85;\r\n         showWinner(draw);\r\n-        winSound.play();\r\n+\r\n     }, 800);\r\n }\r\n \r\n function showWinner(draw) {\r\n     if (!draw) {\r\n         if (currentPlayer === 'circle') {\r\n-            document.getElementById(\"winner\").innerHTML = 'Player 1 won!'\r\n+            document.getElementById(\"winner\").innerHTML = 'Player 1 won!';\r\n+            winSound.play();\r\n         } else if (currentPlayer === 'cross') {\r\n-            document.getElementById(\"winner\").innerHTML = 'Player 2 won!'\r\n+            document.getElementById(\"winner\").innerHTML = 'Player 2 won!';\r\n+            winSound.play();\r\n         }\r\n-    } else document.getElementById(\"winner\").innerHTML = 'DRAW'\r\n+    } else {\r\n+        document.getElementById(\"winner\").innerHTML = 'DRAW';\r\n+        drawSound.play();\r\n+    }\r\n }\r\n \r\n function resetGame() {\r\n     win = false;\r\n"
                 }
             ],
             "date": 1670507132949,

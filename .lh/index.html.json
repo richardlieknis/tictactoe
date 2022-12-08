@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 74,
+            "activePatchIndex": 75,
             "patches": [
                 {
                     "date": 1670506769660,
@@ -304,6 +304,10 @@
                 {
                     "date": 1670532802486,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n         </div>\r\n     </div>\r\n     <div id=\"gameover\" class=\"gameover\">\r\n         <img src=\"src/img/gameover.png\" />\r\n-        <div>Player 1 Win</div>\r\n+        <div id=\"winner\">Player 1 Win</div>\r\n         <div onclick=\"resetGame()\">RESTART</div>\r\n     </div>\r\n </body>\r\n \r\n"
+                },
+                {
+                    "date": 1670535610954,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,17 +22,17 @@\n                 <img src=\"src/img/circle.png\" /> Player 2\r\n             </div>\r\n         </div>\r\n         <div class=\"gameField\">\r\n-            <div class=\"box\" id=\"0\" onclick=\"playerPlace(0)\">0</div>\r\n-            <div class=\"box\" id=\"1\" onclick=\"playerPlace(1)\">1</div>\r\n-            <div class=\"box\" id=\"2\" onclick=\"playerPlace(2)\">2</div>\r\n-            <div class=\"box\" id=\"3\" onclick=\"playerPlace(3)\">3</div>\r\n-            <div class=\"box\" id=\"4\" onclick=\"playerPlace(4)\">4</div>\r\n-            <div class=\"box\" id=\"5\" onclick=\"playerPlace(5)\">5</div>\r\n-            <div class=\"box\" id=\"6\" onclick=\"playerPlace(6)\">6</div>\r\n-            <div class=\"box\" id=\"7\" onclick=\"playerPlace(7)\">7</div>\r\n-            <div class=\"box\" id=\"8\" onclick=\"playerPlace(8)\">8</div>\r\n+            <div class=\"box\" id=\"0\" onclick=\"playerPlace(0)\"></div>\r\n+            <div class=\"box\" id=\"1\" onclick=\"playerPlace(1)\"></div>\r\n+            <div class=\"box\" id=\"2\" onclick=\"playerPlace(2)\"></div>\r\n+            <div class=\"box\" id=\"3\" onclick=\"playerPlace(3)\"></div>\r\n+            <div class=\"box\" id=\"4\" onclick=\"playerPlace(4)\"></div>\r\n+            <div class=\"box\" id=\"5\" onclick=\"playerPlace(5)\"></div>\r\n+            <div class=\"box\" id=\"6\" onclick=\"playerPlace(6)\"></div>\r\n+            <div class=\"box\" id=\"7\" onclick=\"playerPlace(7)\"></div>\r\n+            <div class=\"box\" id=\"8\" onclick=\"playerPlace(8)\"></div>\r\n             <div class=\"lines\">\r\n                 <div id=\"line0\" class=\"line d-none\" style=\"top: 75px; left: 20px\"></div>\r\n                 <div id=\"line1\" class=\"line d-none\" style=\"top: 240px; left: 20px\"></div>\r\n                 <div id=\"line2\" class=\"line d-none\" style=\"top: 400px; left: 20px\"></div>\r\n"
                 }
             ],
             "date": 1670506769660,

@@ -4,9 +4,10 @@ const gameover = document.getElementById('gameover');
 const winSound = new Audio('src/audio/win.mp3');
 const drawSound = new Audio('src/audio/draw.mp3');
 
-let fields = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+let fields = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 let currentPlayer = 'cross';
 let win = false;
+let counter = 0;
 
 let winFields = [
     [0, 1, 2],
@@ -20,8 +21,9 @@ let winFields = [
 ]
 
 function playerPlace(id) {
+    counter++;
     let fieldHtml = document.getElementById(id);
-    if (fields[id] < 9 && !win) {
+    if (fields[id] < 10 && !win) {
         if (currentPlayer === 'circle') {
             fields[id] = 'circle';
             fieldHtml.innerHTML = `<img src="src/img/circle.png">`;
@@ -33,8 +35,11 @@ function playerPlace(id) {
             fieldHtml.innerHTML = `<img src="src/img/cross.png">`;
             checkWin();
             setCurrentPlayer(currentPlayer);
-
         }
+    }
+
+    if (counter === 9 && !win) {
+        showGameover(true);
     }
 }
 
@@ -55,24 +60,33 @@ function checkWin() {
     for (let i = 0; i < winFields.length; i++) {
         if (fields[winFields[i][0]] === fields[winFields[i][1]] &&
             fields[winFields[i][1]] === fields[winFields[i][2]]) {
-            console.log("GEWONNEN:", currentPlayer);
             win = true;
             document.getElementById(`line${i}`).classList.remove('d-none');
-
-            setTimeout(function() {
-                document.getElementById('gameover').style.scale = .85;
-                showWinner();
-                winSound.play();
-            }, 800);
+            showGameover();
         }
     }
 }
 
-function showWinner() {
-    if (currentPlayer === 'circle') {
-        document.getElementById("winner").innerHTML = 'Player 1 won!'
-    } else if (currentPlayer === 'cross') {
-        document.getElementById("winner").innerHTML = 'Player 2 won!'
+function showGameover(draw) {
+    setTimeout(function() {
+        document.getElementById('gameover').style.scale = .85;
+        showWinner(draw);
+
+    }, 800);
+}
+
+function showWinner(draw) {
+    if (!draw) {
+        if (currentPlayer === 'circle') {
+            document.getElementById("winner").innerHTML = 'Player 1 won!';
+            winSound.play();
+        } else if (currentPlayer === 'cross') {
+            document.getElementById("winner").innerHTML = 'Player 2 won!';
+            winSound.play();
+        }
+    } else {
+        document.getElementById("winner").innerHTML = 'DRAW';
+        drawSound.play();
     }
 }
 
